@@ -55,4 +55,4 @@ The DUT and a basic smoke test are on EDA Playground: https://www.edaplayground.
 | Abdalkarim Dwikat | 1210288 |
 | Qussai Assi | 1211204 |
 | Ibrahim Ardah | 1220874 |
-| Maan Foqaha | 1220847 |
+| Maen Foqaha | 1220847 |
