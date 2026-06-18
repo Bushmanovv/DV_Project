@@ -18,7 +18,10 @@ package bird_pkg;
   `include "bird_base_sequence.sv"
   `include "bird_local_sequence.sv"
   `include "bird_base_test.sv"
-  `include "local_basic_test.sv"
+  `include "reset_clears_all_outputs_test.sv"
+  `include "valid_ready_basic_transfer_test.sv"
+  `include "backpressure_stability_test.sv"
+  `include "cfg_sampled_on_first_payload_byte_test.sv"
 
 endpackage
 
