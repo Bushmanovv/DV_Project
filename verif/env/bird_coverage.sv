@@ -1,11 +1,3 @@
-// ============================================================
-// bird_coverage.sv  -  Student D
-// Functional coverage of the input stimulus. Samples every observed input
-// fragment (via the input monitor broadcast) and records cfg field bins.
-//
-// Code coverage (line/toggle/fsm/branch/cond) is collected separately by
-// VCS through the -cm flags in scripts/run_regression.sh.
-// ============================================================
 class bird_coverage;
 
   mailbox #(bird_transaction) cov_mbx;
