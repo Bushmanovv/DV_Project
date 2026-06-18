@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module bird_tb;
 
   bit clk;
