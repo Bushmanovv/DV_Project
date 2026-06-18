@@ -1,4 +1,4 @@
-// ============================================================
+
 // bird_remote_checker.sv  -  Student C
 // Reference model + checker for the REMOTE path.
 //
