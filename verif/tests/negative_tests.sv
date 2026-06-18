@@ -18,7 +18,22 @@ class invalid_cfg_test extends bird_base_test;
 endclass
 
 
+// TP13 - remote protocol error drops
+class remote_protocol_test extends bird_base_test;
+  function new(virtual bird_if vif);
+    super.new(vif, "remote_protocol_test");
+  endfunction
 
+  virtual task run();
+    bird_remote_protocol_sequence seq;
+    super.run();
+    seq = new();
+    seq.body(env);
+    repeat (200) @(posedge vif.clk);
+    report();
+    $finish;
+  endtask
+endclass
 
 
 // TP14 - drop counter increments once per dropped packet
