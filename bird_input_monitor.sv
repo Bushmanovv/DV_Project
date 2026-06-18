@@ -1,9 +1,4 @@
-// ============================================================
-// bird_input_monitor.sv  -  Student C
-// Observes the input interface and reconstructs ONE bird_transaction
-// per fragment (cfg + payload bytes + 2 CRC bytes), then broadcasts it
-// to every subscriber mailbox (local checker, remote checker, coverage...).
-// ============================================================
+
 class bird_input_monitor;
 
   virtual bird_if vif;
