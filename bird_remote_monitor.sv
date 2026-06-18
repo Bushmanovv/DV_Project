@@ -1,8 +1,4 @@
-// ============================================================
-// bird_remote_monitor.sv  -  Student C
-// Captures every 32-bit word accepted on the REMOTE output handshake
-// and forwards it to the remote checker / reference model.
-// ============================================================
+
 class bird_remote_monitor;
 
   virtual bird_if vif;
