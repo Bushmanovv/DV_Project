@@ -1,3 +1,4 @@
+
 class bird_local_monitor;
 
   virtual bird_if vif;
