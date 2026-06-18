@@ -1,22 +1,4 @@
 
-// bird_remote_checker.sv  -  Student C
-// Reference model + checker for the REMOTE path.
-//
-// Mirrors the DUT's remote behavior:
-//   - Fragments of a packet are indexed by SEQ_NUM (1..N).
-//   - FRAG_NUM carries the total fragment count N for the packet.
-//   - Fragments may arrive out of order; the model stores each at its
-//     SEQ_NUM slot and, once all 1..N slots are filled, merges them in
-//     order, REGENERATES a CRC16 over the merged payload, packs the
-//     payload into little-endian 32-bit words, then appends one CRC word
-//     {16'h0000, crc16}.
-//
-// It then compares the predicted output words against what the remote
-// monitor actually observed on the remote output.
-//
-// NOTE: this implements the VALID remote path (TP08-TP11). Drop / protocol
-// error prediction is Student D's extension.
-// ============================================================
 class bird_remote_checker;
 
   mailbox #(bird_transaction) input_obs_mbx;
