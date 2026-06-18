@@ -1,8 +1,4 @@
-// ============================================================
-// bird_local_monitor.sv  -  Student C
-// Captures every byte accepted on the LOCAL output handshake and
-// forwards it to the local checker.
-// ============================================================
+
 class bird_local_monitor;
 
   virtual bird_if vif;
