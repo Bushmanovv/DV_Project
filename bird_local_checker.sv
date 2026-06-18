@@ -1,4 +1,4 @@
-
+class bird_local_checker;
 
   mailbox #(bird_transaction) input_obs_mbx;
   mailbox #(byte unsigned)    local_byte_mbx;
