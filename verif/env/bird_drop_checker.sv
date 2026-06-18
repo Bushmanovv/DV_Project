@@ -1,16 +1,3 @@
-// ============================================================
-// bird_drop_checker.sv  -  Student D
-// Reference model for the DUT drop counter.
-//
-// The DUT increments drop_cnt by exactly 1 for every fragment whose cfg
-// is invalid (reserved bits != 0, PAYLOAD_LEN==0, local with SEQ/FRAG != 1,
-// or remote with SEQ/FRAG == 0). bird_cfg::is_legal() is the exact inverse
-// of the DUT's cfg_invalid() check, so we reuse it here.
-//
-// exp_drops is 16-bit so it wraps modulo-2^16 just like the DUT counter.
-// preload() lets the wrap-around test (TP15) align the model with a forced
-// DUT counter value.
-// ============================================================
 class bird_drop_checker;
 
   mailbox #(bird_transaction) drop_mbx;
