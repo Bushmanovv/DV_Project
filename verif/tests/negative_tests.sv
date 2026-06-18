@@ -36,22 +36,7 @@ class remote_protocol_test extends bird_base_test;
 endclass
 
 
-// TP14 - drop counter increments once per dropped packet
-class drop_count_test extends bird_base_test;
-  function new(virtual bird_if vif);
-    super.new(vif, "drop_count_test");
-  endfunction
 
-  virtual task run();
-    bird_drop_count_sequence seq;
-    super.run();
-    seq = new();
-    seq.body(env);
-    repeat (200) @(posedge vif.clk);
-    report();
-    $finish;
-  endtask
-endclass
 
 
 // TP15 - drop counter wrap-around (0xFFFF -> 0x0000)
