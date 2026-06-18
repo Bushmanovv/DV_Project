@@ -1,9 +1,4 @@
-// ============================================================
-// negative_tests.sv  -  Student D
-// Tests TP12-TP15 (invalid cfg, remote protocol errors, drop counter,
-// drop-counter wrap-around). Each relies on bird_drop_checker to predict
-// the expected drop_cnt and compare against the DUT.
-// ============================================================
+
 
 // TP12 - invalid cfg drops
 class invalid_cfg_test extends bird_base_test;
