@@ -1,5 +1,20 @@
 
+// TP12 - invalid cfg drops
+class invalid_cfg_test extends bird_base_test;
+  function new(virtual bird_if vif);
+    super.new(vif, "invalid_cfg_test");
+  endfunction
 
+  virtual task run();
+    bird_invalid_cfg_sequence seq;
+    super.run();
+    seq = new();
+    seq.body(env);
+    repeat (200) @(posedge vif.clk);
+    report();
+    $finish;
+  endtask
+endclass
 
 
 
