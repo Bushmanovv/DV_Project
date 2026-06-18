@@ -1,10 +1,4 @@
-// ============================================================
-// bird_local_checker.sv  -  Student C
-// Reference checker for the LOCAL path.
-// For each legal local fragment observed on the input, the DUT must
-// forward the payload bytes followed by the 2 input CRC bytes UNCHANGED
-// on the local output. Remote / dropped fragments produce no local output.
-// ============================================================
+
 class bird_local_checker;
 
   mailbox #(bird_transaction) input_obs_mbx;
