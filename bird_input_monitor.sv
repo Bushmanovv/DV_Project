@@ -1,4 +1,4 @@
-
+class bird_input_monitor;
 
   virtual bird_if vif;
 
