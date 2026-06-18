@@ -50,7 +50,18 @@ class bird_coverage;
     cg_input = new();
   endfunction
 
-
+  task run();
+    bird_transaction tr;
+    forever begin
+      cov_mbx.get(tr);
+      s_traffic = tr.cfg_obj.traffic_type;
+      s_len     = tr.cfg_obj.payload_len;
+      s_frag    = tr.cfg_obj.frag_num;
+      s_seq     = tr.cfg_obj.seq_num;
+      s_legal   = tr.cfg_obj.is_legal();
+      cg_input.sample();
+    end
+  endtask
 
   function void report();
     $display("==== COVERAGE REPORT: cg_input = %0.2f%% ====", cg_input.get_coverage());
