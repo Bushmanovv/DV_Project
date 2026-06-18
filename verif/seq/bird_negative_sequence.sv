@@ -1,11 +1,3 @@
-// ============================================================
-// bird_negative_sequence.sv  -  Student D
-// Negative stimulus: invalid cfg and remote protocol errors (TP12-TP15).
-//
-// make_frag_raw() builds a fragment with arbitrary cfg fields (including
-// illegal values). payload size always equals PAYLOAD_LEN so the input
-// monitor and DUT stay byte-aligned even for invalid fragments.
-// ============================================================
 class bird_negative_base_sequence extends bird_base_sequence;
 
   function new(string name = "bird_negative_base_sequence");
