@@ -36,6 +36,48 @@ module bird_test(bird_if vif);
         test = t;
       end
 
+            "local_basic_test": begin
+        local_basic_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "local_backpressure_test": begin
+        local_backpressure_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "local_payload_boundary_test": begin
+        local_payload_boundary_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "invalid_cfg_test": begin
+        invalid_cfg_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_protocol_test": begin
+        remote_protocol_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "drop_count_test": begin
+        drop_count_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "drop_wrap_test": begin
+        drop_wrap_test t;
+        t = new(vif);
+        test = t;
+      end
+
       default: begin
         $display("ERROR: Unknown TEST=%s", test_name);
         $finish;
