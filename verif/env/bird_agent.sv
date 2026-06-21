@@ -26,13 +26,4 @@ class bird_input_agent;
     join_none
   endtask
 
-  task run_generator();
-    gen.run();
-  endtask
-
-  task send(bird_transaction tr);
-    gen2drv_mbx.put(tr);
-  endtask
-
 endclass
-
