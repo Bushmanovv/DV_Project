@@ -1,3 +1,4 @@
++incdir+.
 +incdir+./verif/cfg
 +incdir+./verif/env
 +incdir+./verif/seq
