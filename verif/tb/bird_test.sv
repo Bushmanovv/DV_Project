@@ -48,21 +48,50 @@ module bird_test(bird_if vif);
         test = t;
       end
 
-      "local_backpressure_test": begin
-        local_backpressure_test t;
+      "remote_basic_test": begin
+        remote_basic_test t;
         t = new(vif);
         test = t;
       end
 
-      // ---- Student D: TP25 mixed + TP26 random regression ----
-      "mixed_traffic_test": begin
-        mixed_traffic_test t;
+      "remote_inorder_test": begin
+        remote_inorder_test t;
         t = new(vif);
         test = t;
       end
 
-      "random_regression_test": begin
-        random_regression_test t;
+      "remote_reorder_test": begin
+        remote_reorder_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_crc_test": begin
+        remote_crc_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "invalid_cfg_test": begin
+        invalid_cfg_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_protocol_test": begin
+        remote_protocol_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "drop_count_test": begin
+        drop_count_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "drop_wrap_test": begin
+        drop_wrap_test t;
         t = new(vif);
         test = t;
       end
