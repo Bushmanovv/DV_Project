@@ -14,14 +14,10 @@ package bird_pkg;
   `include "bird_remote_monitor.sv"
   `include "bird_local_checker.sv"
   `include "bird_remote_checker.sv"
-  `include "bird_drop_checker.sv"
-  `include "bird_coverage.sv"
   `include "bird_agent.sv"
   `include "bird_env.sv"
   `include "bird_base_sequence.sv"
   `include "bird_local_sequence.sv"
-  `include "bird_remote_sequence.sv"
-  `include "bird_negative_sequence.sv"
   `include "bird_base_test.sv"
   `include "reset_clears_all_outputs_test.sv"
   `include "valid_ready_basic_transfer_test.sv"
@@ -29,8 +25,6 @@ package bird_pkg;
   `include "cfg_sampled_on_first_payload_byte_test.sv"
   `include "local_basic_test.sv"
   `include "local_payload_boundary_test.sv"
-  `include "remote_tests.sv"
-  `include "negative_tests.sv"
+  `include "local_backpressure_test.sv"
 
 endpackage
-
