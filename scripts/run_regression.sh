@@ -9,14 +9,17 @@ set -e
 COV="-cm line+cond+fsm+tgl+branch+assert"
 CMDIR="simv.cm"
 
-# Tests currently wired into bird_test.sv / bird_pkg.sv.
-# Foundation tests (Student A) populate the legal coverage bins;
-# the negative tests (Student D, TP12-TP15) exercise the drop path.
-# NOTE: add Student C's remote_* tests here once they are integrated.
+# Full regression - all wired tests across students A/B/C/D.
 TESTS="reset_clears_all_outputs_test \
        valid_ready_basic_transfer_test \
        backpressure_stability_test \
        cfg_sampled_on_first_payload_byte_test \
+       local_basic_test \
+       local_payload_boundary_test \
+       remote_basic_test \
+       remote_inorder_test \
+       remote_reorder_test \
+       remote_crc_test \
        invalid_cfg_test \
        remote_protocol_test \
        drop_count_test \

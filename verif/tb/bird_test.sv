@@ -36,6 +36,44 @@ module bird_test(bird_if vif);
         test = t;
       end
 
+      // ---- Student B: local traffic tests (TP05-TP06) ----
+      "local_basic_test": begin
+        local_basic_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "local_payload_boundary_test": begin
+        local_payload_boundary_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      // ---- Student C: remote traffic tests (TP08-TP11) ----
+      "remote_basic_test": begin
+        remote_basic_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_inorder_test": begin
+        remote_inorder_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_reorder_test": begin
+        remote_reorder_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "remote_crc_test": begin
+        remote_crc_test t;
+        t = new(vif);
+        test = t;
+      end
+
       // ---- Student D: negative / drop tests (TP12-TP15) ----
       "invalid_cfg_test": begin
         invalid_cfg_test t;
