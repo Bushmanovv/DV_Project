@@ -43,6 +43,18 @@ class bird_remote_base_sequence extends bird_base_sequence;
     return tr;
   endfunction
 
+  // Drain fragment: a valid LOCAL packet appended after the remote stimulus.
+  // The input monitor only emits a fragment once the NEXT fragment starts on
+  // the bus, so without this the final remote fragment of the packet never
+  // reaches the remote checker (it would never see a complete packet). The
+  // local drain is ignored by the remote checker and adds no remote output.
+  task send_drain(bird_env env);
+    bird_transaction tr;
+    tr = new("drain");
+    tr.set_local_packet(4, 5'd1);
+    env.input_agent.send(tr);
+  endtask
+
 endclass
 
 
@@ -56,6 +68,7 @@ class bird_remote_single_sequence extends bird_remote_base_sequence;
 
   virtual task body(bird_env env);
     env.input_agent.send(make_frag(1, 1, len));
+    send_drain(env);
     $display("[%0t] SEQ %s: sent single remote fragment", $time, name);
   endtask
 endclass
@@ -75,6 +88,7 @@ class bird_remote_inorder_sequence extends bird_remote_base_sequence;
     for (int unsigned s = 1; s <= n; s++) begin
       env.input_agent.send(make_frag(s, n, len, corrupt_crc));
     end
+    send_drain(env);
     $display("[%0t] SEQ %s: sent %0d in-order remote fragments", $time, name, n);
   endtask
 endclass
@@ -92,6 +106,7 @@ class bird_remote_reorder_sequence extends bird_remote_base_sequence;
     env.input_agent.send(make_frag(3, 3, len));
     env.input_agent.send(make_frag(1, 3, len));
     env.input_agent.send(make_frag(2, 3, len));
+    send_drain(env);
     $display("[%0t] SEQ %s: sent 3 remote fragments out of order (3,1,2)", $time, name);
   endtask
 endclass
