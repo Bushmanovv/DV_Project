@@ -8,7 +8,7 @@ class local_payload_boundary_test extends bird_base_test;
     bird_transaction tr;
     tr = new("boundary_local_packet");
     tr.set_local_packet(length, 5'd1);
-    env.input_agent.send(tr);
+    env.input_agent.gen.transmit(tr);
     $display("TP06 sent local packet with length = %0d", length);
   endtask
 
@@ -20,7 +20,7 @@ class local_payload_boundary_test extends bird_base_test;
     send_local_packet(1);
     send_local_packet(255);
 
-    repeat (3000) @(posedge vif.clk);
+    repeat (3000) @(vif.drv_cb);
 
     report();
 
