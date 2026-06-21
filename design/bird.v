@@ -158,8 +158,8 @@ module bird (
         void'(local_q.pop_front());
       end
 
-      remote_vld  <= (remote_wq.size() != 0);
-      data_remote <= (remote_wq.size() != 0) ? remote_wq[0] : 32'h0;
+      remote_vld  = (remote_wq.size() != 0);
+      data_remote = (remote_wq.size() != 0) ? remote_wq[0] : 32'h0;
       if (remote_vld && remote_rdy) begin
         void'(remote_wq.pop_front());
       end
@@ -393,7 +393,7 @@ module bird (
                     if (payload_left > 0) payload_left <= payload_left - 1;
 
                     // After consuming the last remaining payload byte, move to CRC
-                    if (payload_left == 3) begin
+                    if (payload_left == 1) begin
                         //$display("ssssssssssssssssss state moved to crc");
                         rx_st <= RX_CRC;
                     end

@@ -1,0 +1,27 @@
+ID,Feature,Spec Ref,Description,Stimulus,Expected Result,Test Name,Coverage
+TP-01,Local forwarding,Spec 6,Single-fragment local packet (cfg[0]=0) forwarded byte-for-byte to local output,"Drive 1 local packet, PAYLOAD_LEN=N, FRAG_NUM=1",Payload + input CRC16 appear unchanged on data_local; no remote activity,bird_local_basic_test,cg_traffic_type/cg_payload_len
+TP-02,Local CRC passthrough,Spec 6,Input CRC16 forwarded unchanged on local path (NOT regenerated),Drive local packet with known CRC16,Output CRC16 == input CRC16,bird_local_basic_test,cg_crc_path
+TP-03,Local boundary lengths,Spec 5/6,Local payload at min and max length,Drive local packets with PAYLOAD_LEN=1 and PAYLOAD_LEN=255,Both forwarded correctly,bird_local_boundary_test,cg_payload_len(bins 1/255)
+TP-04,Remote single fragment,Spec 7,Remote packet (cfg[0]=1) with one fragment,"Drive 1 remote fragment, FRAG_NUM=1, SEQ_NUM=k",Merged payload + regenerated CRC16 on remote output,bird_remote_basic_test,cg_traffic_type/cg_frag_num
+TP-05,Remote multi-fragment in order,Spec 7.2,Multiple fragments same SEQ_NUM arriving in order,"Drive frags 1..N in order, same SEQ_NUM",Concatenated payload in FRAG_NUM order + new CRC16,bird_remote_inorder_test,cg_frag_count
+TP-06,Remote fragment reordering,Spec 7.1/7.2,Fragments arrive out of order,"Drive frags in shuffled order (e.g. 3,1,2), same SEQ_NUM",Output reordered by FRAG_NUM; payload correct,bird_remote_reorder_test,cg_frag_count/cross order
+TP-07,Remote CRC regeneration,Spec 7.2/7.3,New CRC16 computed over merged payload,Drive multi-frag remote packet,Remote output CRC16 == CRC over merged payload (not input CRCs),bird_remote_crc_test,cg_crc_path
+TP-08,Drop: SEQ_NUM==0,Spec 8.1,Packet with SEQ_NUM=0 silently dropped,Drive fragment with SEQ_NUM=0,No output; drop_cnt += 1,bird_drop_seqnum0_test,cg_drop_reason
+TP-09,Drop: FRAG_NUM==0,Spec 8.1,Packet with FRAG_NUM=0 silently dropped,Drive fragment with FRAG_NUM=0,No output; drop_cnt += 1,bird_drop_fragnum0_test,cg_drop_reason
+TP-10,Drop: PAYLOAD_LEN out of range,Spec 8.1,PAYLOAD_LEN=0 (or >255 if encodable) dropped,Drive fragment with PAYLOAD_LEN=0,No output; drop_cnt += 1,bird_drop_badlen_test,cg_drop_reason
+TP-11,Drop: reserved bits non-zero,Spec 8.1,Any reserved cfg bit set => drop,"Drive fragment with cfg[7:1], cfg[23:21], or cfg[31:29] != 0",No output; drop_cnt += 1,bird_drop_reserved_test,cg_drop_reason/cg_reserved
+TP-12,Drop: mismatched SEQ_NUM mid-accumulation,Spec 8.1,Fragment with different SEQ_NUM during accumulation,Start packet SEQ=k; inject fragment SEQ=j(!=k),Affected packet dropped; drop_cnt += 1,bird_drop_seqmismatch_test,cg_drop_reason
+TP-13,Drop: missing required fragment,Spec 8.1,A required FRAG_NUM never arrives,"Drive frags 1,3 (skip 2) then end",Packet dropped; drop_cnt += 1,bird_drop_missingfrag_test,cg_drop_reason
+TP-14,Drop: new FRAG_NUM==1 while prev incomplete,Spec 8.1,New packet starts before previous completes,Start SEQ=k incomplete; send FRAG_NUM=1 SEQ=j,Previous dropped; drop_cnt += 1,bird_drop_restart_test,cg_drop_reason
+TP-15,drop_cnt increments once per packet,Spec 8.2,Counter +1 per dropped packet regardless of frag count,Drive multi-fragment packet that gets dropped,drop_cnt increments by exactly 1,bird_drop_count_test,cg_drop_cnt
+TP-16,drop_cnt wrap-around,Spec 8.2,Modulo-2^16 wrap,Drive 65537 dropped packets (or force near-max start),drop_cnt wraps 0xFFFF -> 0x0000,bird_drop_wrap_test,cg_drop_cnt(bins max/wrap)
+TP-17,Handshake transfer rule,Spec 3.1,Transfer only when vld=1 AND rdy=1,Random vld/rdy patterns on all interfaces,Data moves only on vld&rdy cycles,bird_handshake_test,SVA assert_transfer
+TP-18,Handshake stability under backpressure,Spec 3.2,Data/cfg stable while vld=1 rdy=0,Hold vld=1 and deassert rdy for several cycles,data_in/cfg held stable until accepted,bird_backpressure_test,SVA assert_stable
+TP-19,Output backpressure (local),Spec 3,local_rdy deasserted by consumer,Local packet with local_rdy toggling,Output paced correctly; no data loss,bird_local_backpressure_test,cg_backpressure
+TP-20,Output backpressure (remote),Spec 3,remote_rdy deasserted by consumer,Remote packet with remote_rdy toggling,Output paced correctly; no data loss,bird_remote_backpressure_test,cg_backpressure
+TP-21,Reset behavior,Spec 9,Async/sync reset clears state,Assert rst_n=0 mid-packet,Outputs deasserted; buffers cleared; in-progress discarded; drop_cnt=0,bird_reset_test,cg_reset
+TP-22,Reset during accumulation,Spec 9,Reset while remote packet accumulating,Start multi-frag packet; assert reset; resume,No stale output after reset; clean restart,bird_reset_midaccum_test,cg_reset
+TP-23,Single-frag remote (N=1),Spec 7.1,Remote packet with exactly one fragment,Drive FRAG_NUM=1 only and complete,Merged output == single fragment payload + new CRC,bird_remote_single_test,cg_frag_count(bin 1)
+TP-24,Max fragment count,Spec 5/7,Remote packet using high FRAG_NUM range,Drive many fragments (up to 31),All accumulated/reordered correctly,bird_remote_maxfrag_test,cg_frag_count(bin max)
+TP-25,Mixed traffic stream,Spec 6/7,Interleave local and remote packets,Randomized stream of local + remote + drops,All routed/counted correctly,bird_random_mixed_test,all covergroups
+TP-26,Random regression,All,Constrained-random soak,Long random sequence with backpressure + drops,Scoreboard clean; coverage closure,bird_random_test,all covergroups
