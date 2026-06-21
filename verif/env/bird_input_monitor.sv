@@ -76,8 +76,10 @@ class bird_input_monitor;
       tr.crc16 = {bytes[plen], bytes[plen+1]};
     end
 
+    // try_put: non-blocking (VCS disallows a blocking put inside a function).
+    // The mailboxes are unbounded, so try_put always succeeds.
     foreach (subscribers[i]) begin
-      subscribers[i].put(tr);
+      void'(subscribers[i].try_put(tr));
     end
 
     $display("[%0t] INPUT_MON observed: %s", $time, tr.sprint());
