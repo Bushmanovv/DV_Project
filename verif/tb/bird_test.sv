@@ -54,6 +54,19 @@ module bird_test(bird_if vif);
         test = t;
       end
 
+      // ---- Student D: TP25 mixed + TP26 random regression ----
+      "mixed_traffic_test": begin
+        mixed_traffic_test t;
+        t = new(vif);
+        test = t;
+      end
+
+      "random_regression_test": begin
+        random_regression_test t;
+        t = new(vif);
+        test = t;
+      end
+
       default: begin
         $display("ERROR: Unknown TEST=%s", test_name);
         $finish;
