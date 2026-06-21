@@ -27,6 +27,14 @@ class bird_negative_base_sequence extends bird_base_sequence;
     tr.crc16 = bird_transaction::calc_crc16(tr.payload);
     return tr;
   endfunction
+
+  // Drain fragment: a single VALID local packet appended after the stimulus.
+  // The input monitor only emits a fragment once the NEXT fragment begins on
+  // the bus, so without this the final real fragment never reaches the
+  // checkers. Being legal, this drain adds no drop and is not itself checked.
+  task send_drain(bird_env env);
+    env.input_agent.send(make_frag_raw("drain", 1'b0, 4, 1, 1));
+  endtask
 endclass
 
 
@@ -43,6 +51,7 @@ class bird_invalid_cfg_sequence extends bird_negative_base_sequence;
     env.input_agent.send(make_frag_raw("inv_seq",  1'b0, 4, 1, 2));
     // local with FRAG_NUM != 1
     env.input_agent.send(make_frag_raw("inv_frag", 1'b0, 4, 2, 1));
+    send_drain(env);
     $display("[%0t] SEQ %s: sent 4 invalid-cfg fragments (expect drop_cnt += 4)", $time, name);
   endtask
 endclass
@@ -55,6 +64,7 @@ class bird_remote_protocol_sequence extends bird_negative_base_sequence;
   virtual task body(bird_env env);
     env.input_agent.send(make_frag_raw("rem_seq0",  1'b1, 4, 3, 0)); // SEQ_NUM == 0
     env.input_agent.send(make_frag_raw("rem_frag0", 1'b1, 4, 0, 3)); // FRAG_NUM == 0
+    send_drain(env);
     $display("[%0t] SEQ %s: sent 2 remote protocol-error fragments (expect drop_cnt += 2)", $time, name);
   endtask
 endclass
@@ -74,6 +84,7 @@ class bird_drop_count_sequence extends bird_negative_base_sequence;
     env.input_agent.send(good);
 
     env.input_agent.send(make_frag_raw("bad2", 1'b0, 0, 1, 1));  // invalid -> +1
+    send_drain(env);
     $display("[%0t] SEQ %s: 2 invalid + 1 valid (expect drop_cnt += 2)", $time, name);
   endtask
 endclass
@@ -85,6 +96,7 @@ class bird_drop_wrap_sequence extends bird_negative_base_sequence;
 
   virtual task body(bird_env env);
     env.input_agent.send(make_frag_raw("wrap", 1'b0, 0, 1, 1));  // 1 invalid -> wraps to 0
+    send_drain(env);
     $display("[%0t] SEQ %s: sent 1 invalid fragment to trigger wrap", $time, name);
   endtask
 endclass
