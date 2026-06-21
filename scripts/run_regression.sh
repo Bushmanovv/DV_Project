@@ -23,7 +23,9 @@ TESTS="reset_clears_all_outputs_test \
        invalid_cfg_test \
        remote_protocol_test \
        drop_count_test \
-       drop_wrap_test"
+       drop_wrap_test \
+       mixed_traffic_test \
+       random_regression_test"
 
 mkdir -p coverage/code_coverage_report coverage/functional_coverage_report logs
 

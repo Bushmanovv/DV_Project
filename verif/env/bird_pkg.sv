@@ -22,6 +22,7 @@ package bird_pkg;
   `include "bird_local_sequence.sv"
   `include "bird_remote_sequence.sv"
   `include "bird_negative_sequence.sv"
+  `include "bird_regression_sequence.sv"
   `include "bird_base_test.sv"
   `include "reset_clears_all_outputs_test.sv"
   `include "valid_ready_basic_transfer_test.sv"
@@ -31,6 +32,7 @@ package bird_pkg;
   `include "local_payload_boundary_test.sv"
   `include "remote_tests.sv"
   `include "negative_tests.sv"
+  `include "regression_tests.sv"
 
 endpackage
 
