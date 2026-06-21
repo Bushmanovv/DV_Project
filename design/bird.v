@@ -158,8 +158,8 @@ module bird (
         void'(local_q.pop_front());
       end
 
-      remote_vld  <= (remote_wq.size() != 0);
-      data_remote <= (remote_wq.size() != 0) ? remote_wq[0] : 32'h0;
+      remote_vld  = (remote_wq.size() != 0);
+      data_remote = (remote_wq.size() != 0) ? remote_wq[0] : 32'h0;
       if (remote_vld && remote_rdy) begin
         void'(remote_wq.pop_front());
       end
