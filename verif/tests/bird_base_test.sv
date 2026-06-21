@@ -14,7 +14,7 @@ class bird_base_test;
     $display("[%0t] TEST starting: %s", $time, name);
     env.run();
     wait (vif.rst_n == 1'b1);
-    repeat (2) @(posedge vif.clk);
+    repeat (2) @(vif.drv_cb);
   endtask
 
   virtual function void report();
