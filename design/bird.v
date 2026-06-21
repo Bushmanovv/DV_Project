@@ -393,7 +393,7 @@ module bird (
                     if (payload_left > 0) payload_left <= payload_left - 1;
 
                     // After consuming the last remaining payload byte, move to CRC
-                    if (payload_left == 3) begin
+                    if (payload_left == 1) begin
                         //$display("ssssssssssssssssss state moved to crc");
                         rx_st <= RX_CRC;
                     end
