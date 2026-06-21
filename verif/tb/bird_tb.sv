@@ -39,6 +39,21 @@ module bird_tb;
     bus_if.rst_n = 1'b1;
   end
 
+  // TP16 drop_wrap_test: a package class may not force a module signal, so
+  // the DUT drop counter is preloaded here (module scope) to 0xFFFF just after
+  // reset, so the next dropped packet wraps it to 0x0000. The matching
+  // reference model is preloaded inside the test (env.drop_checker.preload).
+  string tb_test_name;
+  initial begin
+    if ($value$plusargs("TEST=%s", tb_test_name) && (tb_test_name == "drop_wrap_test")) begin
+      wait (bus_if.rst_n === 1'b1);
+      @(posedge clk);
+      force dut.drop_cnt = 16'hFFFF;
+      @(posedge clk);
+      release dut.drop_cnt;
+    end
+  end
+
   initial begin
     #100000;
     $fatal(1, "Simulation timeout");

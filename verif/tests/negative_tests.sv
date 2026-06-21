@@ -67,12 +67,9 @@ class drop_wrap_test extends bird_base_test;
     bird_drop_wrap_sequence seq;
     super.run();
 
-    // Preload DUT counter to max, then let it free-run again.
-    force bird_tb.dut.drop_cnt = 16'hFFFF;
-    repeat (2) @(posedge vif.clk);
-    release bird_tb.dut.drop_cnt;
-
-    // Keep the reference model in step with the forced value.
+    // The DUT drop counter is preloaded to 0xFFFF by the testbench top
+    // (bird_tb) for this test - a package class may not force a module
+    // hierarchy. Here we only align the reference model to that value.
     env.drop_checker.preload(16'hFFFF);
 
     seq = new();
