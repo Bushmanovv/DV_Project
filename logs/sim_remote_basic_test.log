@@ -1,0 +1,58 @@
+Command: /home/st57/DV_Project/./simv +TEST=remote_basic_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name remote_basic_test -l logs/sim_remote_basic_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+[0] TEST starting: remote_basic_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+[65] SEQ bird_remote_single_sequence: sent single remote fragment
+==================== Delete cur_frag_payload =========== idle state now
+====================0 Adding data 11
+ssssssssssssssssss state moved to payload
+                  85 ====================3 Adding data 12
+                  95 ====================3 Adding data 13
+                 105 ====================3 Adding data ac
+                 115 .........................crc_left 2  entered state moved to crc 77
+                 135 .........................crc_left 1  entered state moved to crc 10
+no drop and is remote
+payload ready ........
+push back to frag_payload 11
+push back to frag_payload 12
+push back to frag_payload 13
+push back to frag_payload ac
+check if frag done
+ssssssssssssssssss state moved to idle
+[135] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=4 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010401 crc16=0x7710 payload=11 12 13 ac 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[155] REMOTE_MON word=ac131211
+push payload byte 13
+[165] LOCAL_MON byte=11
+[165] REMOTE_MON word=0000e696
+[165] REMOTE_CHK checked remote packet: 2 words (incl CRC word), crc=e696
+push payload byte ac
+[175] LOCAL_MON byte=12
+                 185 .........................crc_left 2  entered state moved to crc 77
+push crc byte 77
+[185] LOCAL_MON byte=13
+[195] LOCAL_MON byte=ac
+[205] LOCAL_MON byte=77
+==== LOCAL CHECKER REPORT: checks=0 passes=0 fails=0 -> PASS ====
+==== REMOTE CHECKER REPORT: packets=1 words=2 pass=2 fail=0 -> PASS ====
+==== DROP CHECKER REPORT: invalid_fragments=0 expected=0x0000 actual=0x0000 -> PASS ====
+==== COVERAGE REPORT: cg_input = 32.74% ====
+$finish called from file "./verif/tests/remote_tests.sv", line 20.
+$finish at simulation time                 3065
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 3065
+CPU Time:      0.380 seconds;       Data structure size:   0.1Mb
+Sun Jun 21 22:30:11 2026

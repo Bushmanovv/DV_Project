@@ -1,0 +1,48 @@
+Command: /home/st57/DV_Project/./simv +TEST=local_basic_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name local_basic_test -l logs/sim_local_basic_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+Starting TP05 local_basic_test
+[0] TEST starting: local_basic_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+[65] SEQ sent: local_packet_0 cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xf3c1 payload=10 
+[65] SEQ sent: local_packet_1 cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xf3c1 payload=10 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte f3
+ssssssssssssssssss state moved to crc
+                  85 .........................crc_left 2  entered state moved to crc c1
+push crc byte c1
+[95] LOCAL_MON byte=f3
+                 105 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[105] LOCAL_MON byte=c1
+[105] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xc110 payload=f3 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte f3
+ssssssssssssssssss state moved to crc
+                 125 .........................crc_left 2  entered state moved to crc c1
+push crc byte c1
+[125] LOCAL_MON byte=10
+[125] LOCAL_CHK checked local packet (3 bytes)
+[135] LOCAL_MON byte=f3
+[145] LOCAL_MON byte=c1
+==== LOCAL CHECKER REPORT: checks=3 passes=3 fails=0 -> PASS ====
+==== REMOTE CHECKER REPORT: packets=0 words=0 pass=0 fail=0 -> PASS ====
+==== DROP CHECKER REPORT: invalid_fragments=0 expected=0x0000 actual=0x0000 -> PASS ====
+==== COVERAGE REPORT: cg_input = 32.74% ====
+PASSED TP05: local packet forwarded correctly
+$finish called from file "./verif/tb/bird_test.sv", line 123.
+$finish at simulation time                 1065
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1065
+CPU Time:      0.410 seconds;       Data structure size:   0.1Mb
+Sun Jun 21 22:30:10 2026

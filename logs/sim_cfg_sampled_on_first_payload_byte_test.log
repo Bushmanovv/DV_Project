@@ -1,0 +1,29 @@
+Command: /home/st57/DV_Project/./simv +TEST=cfg_sampled_on_first_payload_byte_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name cfg_sampled_on_first_payload_byte_test -l logs/sim_cfg_sampled_on_first_payload_byte_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+Starting TP04 cfg_sampled_on_first_payload_byte_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 33
+ssssssssssssssssss state moved to crc
+                  75 .........................crc_left 2  entered state moved to crc e7
+push crc byte e7
+                  85 .........................crc_left 1  entered state moved to crc c0
+push crc byte c0
+ssssssssssssssssss state moved to idle
+PASSED TP04: cfg sampled on first payload byte
+$finish called from file "./verif/tb/bird_test.sv", line 123.
+$finish at simulation time                  295
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 295
+CPU Time:      0.430 seconds;       Data structure size:   0.0Mb
+Sun Jun 21 22:30:10 2026

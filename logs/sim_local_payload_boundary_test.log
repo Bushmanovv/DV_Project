@@ -1,0 +1,556 @@
+Command: /home/st57/DV_Project/./simv +TEST=local_payload_boundary_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name local_payload_boundary_test -l logs/sim_local_payload_boundary_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+Starting TP06 local_payload_boundary_test
+[0] TEST starting: local_payload_boundary_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+TP06 sent local packet with length = 1
+TP06 sent local packet with length = 255
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte f3
+ssssssssssssssssss state moved to crc
+                  85 .........................crc_left 2  entered state moved to crc c1
+push crc byte c1
+[95] LOCAL_MON byte=f3
+                 105 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[105] LOCAL_MON byte=c1
+[105] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xc110 payload=f3 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[125] LOCAL_MON byte=10
+[125] LOCAL_CHK checked local packet (3 bytes)
+push payload byte 13
+[135] LOCAL_MON byte=11
+push payload byte 14
+[145] LOCAL_MON byte=12
+push payload byte 15
+[155] LOCAL_MON byte=13
+push payload byte 16
+[165] LOCAL_MON byte=14
+push payload byte 17
+[175] LOCAL_MON byte=15
+push payload byte 18
+[185] LOCAL_MON byte=16
+push payload byte 19
+[195] LOCAL_MON byte=17
+push payload byte 1a
+[205] LOCAL_MON byte=18
+push payload byte 1b
+[215] LOCAL_MON byte=19
+push payload byte 1c
+[225] LOCAL_MON byte=1a
+push payload byte 1d
+[235] LOCAL_MON byte=1b
+push payload byte 1e
+[245] LOCAL_MON byte=1c
+push payload byte 1f
+[255] LOCAL_MON byte=1d
+push payload byte 20
+[265] LOCAL_MON byte=1e
+push payload byte 21
+[275] LOCAL_MON byte=1f
+push payload byte 22
+[285] LOCAL_MON byte=20
+push payload byte 23
+[295] LOCAL_MON byte=21
+push payload byte 24
+[305] LOCAL_MON byte=22
+push payload byte 25
+[315] LOCAL_MON byte=23
+push payload byte 26
+[325] LOCAL_MON byte=24
+push payload byte 27
+[335] LOCAL_MON byte=25
+push payload byte 28
+[345] LOCAL_MON byte=26
+push payload byte 29
+[355] LOCAL_MON byte=27
+push payload byte 2a
+[365] LOCAL_MON byte=28
+push payload byte 2b
+[375] LOCAL_MON byte=29
+push payload byte 2c
+[385] LOCAL_MON byte=2a
+push payload byte 2d
+[395] LOCAL_MON byte=2b
+push payload byte 2e
+[405] LOCAL_MON byte=2c
+push payload byte 2f
+[415] LOCAL_MON byte=2d
+push payload byte 30
+[425] LOCAL_MON byte=2e
+push payload byte 31
+[435] LOCAL_MON byte=2f
+push payload byte 32
+[445] LOCAL_MON byte=30
+push payload byte 33
+[455] LOCAL_MON byte=31
+push payload byte 34
+[465] LOCAL_MON byte=32
+push payload byte 35
+[475] LOCAL_MON byte=33
+push payload byte 36
+[485] LOCAL_MON byte=34
+push payload byte 37
+[495] LOCAL_MON byte=35
+push payload byte 38
+[505] LOCAL_MON byte=36
+push payload byte 39
+[515] LOCAL_MON byte=37
+push payload byte 3a
+[525] LOCAL_MON byte=38
+push payload byte 3b
+[535] LOCAL_MON byte=39
+push payload byte 3c
+[545] LOCAL_MON byte=3a
+push payload byte 3d
+[555] LOCAL_MON byte=3b
+push payload byte 3e
+[565] LOCAL_MON byte=3c
+push payload byte 3f
+[575] LOCAL_MON byte=3d
+push payload byte 40
+[585] LOCAL_MON byte=3e
+push payload byte 41
+[595] LOCAL_MON byte=3f
+push payload byte 42
+[605] LOCAL_MON byte=40
+push payload byte 43
+[615] LOCAL_MON byte=41
+push payload byte 44
+[625] LOCAL_MON byte=42
+push payload byte 45
+[635] LOCAL_MON byte=43
+push payload byte 46
+[645] LOCAL_MON byte=44
+push payload byte 47
+[655] LOCAL_MON byte=45
+push payload byte 48
+[665] LOCAL_MON byte=46
+push payload byte 49
+[675] LOCAL_MON byte=47
+push payload byte 4a
+[685] LOCAL_MON byte=48
+push payload byte 4b
+[695] LOCAL_MON byte=49
+push payload byte 4c
+[705] LOCAL_MON byte=4a
+push payload byte 4d
+[715] LOCAL_MON byte=4b
+push payload byte 4e
+[725] LOCAL_MON byte=4c
+push payload byte 4f
+[735] LOCAL_MON byte=4d
+push payload byte 50
+[745] LOCAL_MON byte=4e
+push payload byte 51
+[755] LOCAL_MON byte=4f
+push payload byte 52
+[765] LOCAL_MON byte=50
+push payload byte 53
+[775] LOCAL_MON byte=51
+push payload byte 54
+[785] LOCAL_MON byte=52
+push payload byte 55
+[795] LOCAL_MON byte=53
+push payload byte 56
+[805] LOCAL_MON byte=54
+push payload byte 57
+[815] LOCAL_MON byte=55
+push payload byte 58
+[825] LOCAL_MON byte=56
+push payload byte 59
+[835] LOCAL_MON byte=57
+push payload byte 5a
+[845] LOCAL_MON byte=58
+push payload byte 5b
+[855] LOCAL_MON byte=59
+push payload byte 5c
+[865] LOCAL_MON byte=5a
+push payload byte 5d
+[875] LOCAL_MON byte=5b
+push payload byte 5e
+[885] LOCAL_MON byte=5c
+push payload byte 5f
+[895] LOCAL_MON byte=5d
+push payload byte 60
+[905] LOCAL_MON byte=5e
+push payload byte 61
+[915] LOCAL_MON byte=5f
+push payload byte 62
+[925] LOCAL_MON byte=60
+push payload byte 63
+[935] LOCAL_MON byte=61
+push payload byte 64
+[945] LOCAL_MON byte=62
+push payload byte 65
+[955] LOCAL_MON byte=63
+push payload byte 66
+[965] LOCAL_MON byte=64
+push payload byte 67
+[975] LOCAL_MON byte=65
+push payload byte 68
+[985] LOCAL_MON byte=66
+push payload byte 69
+[995] LOCAL_MON byte=67
+push payload byte 6a
+[1005] LOCAL_MON byte=68
+push payload byte 6b
+[1015] LOCAL_MON byte=69
+push payload byte 6c
+[1025] LOCAL_MON byte=6a
+push payload byte 6d
+[1035] LOCAL_MON byte=6b
+push payload byte 6e
+[1045] LOCAL_MON byte=6c
+push payload byte 6f
+[1055] LOCAL_MON byte=6d
+push payload byte 70
+[1065] LOCAL_MON byte=6e
+push payload byte 71
+[1075] LOCAL_MON byte=6f
+push payload byte 72
+[1085] LOCAL_MON byte=70
+push payload byte 73
+[1095] LOCAL_MON byte=71
+push payload byte 74
+[1105] LOCAL_MON byte=72
+push payload byte 75
+[1115] LOCAL_MON byte=73
+push payload byte 76
+[1125] LOCAL_MON byte=74
+push payload byte 77
+[1135] LOCAL_MON byte=75
+push payload byte 78
+[1145] LOCAL_MON byte=76
+push payload byte 79
+[1155] LOCAL_MON byte=77
+push payload byte 7a
+[1165] LOCAL_MON byte=78
+push payload byte 7b
+[1175] LOCAL_MON byte=79
+push payload byte 7c
+[1185] LOCAL_MON byte=7a
+push payload byte 7d
+[1195] LOCAL_MON byte=7b
+push payload byte 7e
+[1205] LOCAL_MON byte=7c
+push payload byte 7f
+[1215] LOCAL_MON byte=7d
+push payload byte 80
+[1225] LOCAL_MON byte=7e
+push payload byte 81
+[1235] LOCAL_MON byte=7f
+push payload byte 82
+[1245] LOCAL_MON byte=80
+push payload byte 83
+[1255] LOCAL_MON byte=81
+push payload byte 84
+[1265] LOCAL_MON byte=82
+push payload byte 85
+[1275] LOCAL_MON byte=83
+push payload byte 86
+[1285] LOCAL_MON byte=84
+push payload byte 87
+[1295] LOCAL_MON byte=85
+push payload byte 88
+[1305] LOCAL_MON byte=86
+push payload byte 89
+[1315] LOCAL_MON byte=87
+push payload byte 8a
+[1325] LOCAL_MON byte=88
+push payload byte 8b
+[1335] LOCAL_MON byte=89
+push payload byte 8c
+[1345] LOCAL_MON byte=8a
+push payload byte 8d
+[1355] LOCAL_MON byte=8b
+push payload byte 8e
+[1365] LOCAL_MON byte=8c
+push payload byte 8f
+[1375] LOCAL_MON byte=8d
+push payload byte 90
+[1385] LOCAL_MON byte=8e
+push payload byte 91
+[1395] LOCAL_MON byte=8f
+push payload byte 92
+[1405] LOCAL_MON byte=90
+push payload byte 93
+[1415] LOCAL_MON byte=91
+push payload byte 94
+[1425] LOCAL_MON byte=92
+push payload byte 95
+[1435] LOCAL_MON byte=93
+push payload byte 96
+[1445] LOCAL_MON byte=94
+push payload byte 97
+[1455] LOCAL_MON byte=95
+push payload byte 98
+[1465] LOCAL_MON byte=96
+push payload byte 99
+[1475] LOCAL_MON byte=97
+push payload byte 9a
+[1485] LOCAL_MON byte=98
+push payload byte 9b
+[1495] LOCAL_MON byte=99
+push payload byte 9c
+[1505] LOCAL_MON byte=9a
+push payload byte 9d
+[1515] LOCAL_MON byte=9b
+push payload byte 9e
+[1525] LOCAL_MON byte=9c
+push payload byte 9f
+[1535] LOCAL_MON byte=9d
+push payload byte a0
+[1545] LOCAL_MON byte=9e
+push payload byte a1
+[1555] LOCAL_MON byte=9f
+push payload byte a2
+[1565] LOCAL_MON byte=a0
+push payload byte a3
+[1575] LOCAL_MON byte=a1
+push payload byte a4
+[1585] LOCAL_MON byte=a2
+push payload byte a5
+[1595] LOCAL_MON byte=a3
+push payload byte a6
+[1605] LOCAL_MON byte=a4
+push payload byte a7
+[1615] LOCAL_MON byte=a5
+push payload byte a8
+[1625] LOCAL_MON byte=a6
+push payload byte a9
+[1635] LOCAL_MON byte=a7
+push payload byte aa
+[1645] LOCAL_MON byte=a8
+push payload byte ab
+[1655] LOCAL_MON byte=a9
+push payload byte ac
+[1665] LOCAL_MON byte=aa
+push payload byte ad
+[1675] LOCAL_MON byte=ab
+push payload byte ae
+[1685] LOCAL_MON byte=ac
+push payload byte af
+[1695] LOCAL_MON byte=ad
+push payload byte b0
+[1705] LOCAL_MON byte=ae
+push payload byte b1
+[1715] LOCAL_MON byte=af
+push payload byte b2
+[1725] LOCAL_MON byte=b0
+push payload byte b3
+[1735] LOCAL_MON byte=b1
+push payload byte b4
+[1745] LOCAL_MON byte=b2
+push payload byte b5
+[1755] LOCAL_MON byte=b3
+push payload byte b6
+[1765] LOCAL_MON byte=b4
+push payload byte b7
+[1775] LOCAL_MON byte=b5
+push payload byte b8
+[1785] LOCAL_MON byte=b6
+push payload byte b9
+[1795] LOCAL_MON byte=b7
+push payload byte ba
+[1805] LOCAL_MON byte=b8
+push payload byte bb
+[1815] LOCAL_MON byte=b9
+push payload byte bc
+[1825] LOCAL_MON byte=ba
+push payload byte bd
+[1835] LOCAL_MON byte=bb
+push payload byte be
+[1845] LOCAL_MON byte=bc
+push payload byte bf
+[1855] LOCAL_MON byte=bd
+push payload byte c0
+[1865] LOCAL_MON byte=be
+push payload byte c1
+[1875] LOCAL_MON byte=bf
+push payload byte c2
+[1885] LOCAL_MON byte=c0
+push payload byte c3
+[1895] LOCAL_MON byte=c1
+push payload byte c4
+[1905] LOCAL_MON byte=c2
+push payload byte c5
+[1915] LOCAL_MON byte=c3
+push payload byte c6
+[1925] LOCAL_MON byte=c4
+push payload byte c7
+[1935] LOCAL_MON byte=c5
+push payload byte c8
+[1945] LOCAL_MON byte=c6
+push payload byte c9
+[1955] LOCAL_MON byte=c7
+push payload byte ca
+[1965] LOCAL_MON byte=c8
+push payload byte cb
+[1975] LOCAL_MON byte=c9
+push payload byte cc
+[1985] LOCAL_MON byte=ca
+push payload byte cd
+[1995] LOCAL_MON byte=cb
+push payload byte ce
+[2005] LOCAL_MON byte=cc
+push payload byte cf
+[2015] LOCAL_MON byte=cd
+push payload byte d0
+[2025] LOCAL_MON byte=ce
+push payload byte d1
+[2035] LOCAL_MON byte=cf
+push payload byte d2
+[2045] LOCAL_MON byte=d0
+push payload byte d3
+[2055] LOCAL_MON byte=d1
+push payload byte d4
+[2065] LOCAL_MON byte=d2
+push payload byte d5
+[2075] LOCAL_MON byte=d3
+push payload byte d6
+[2085] LOCAL_MON byte=d4
+push payload byte d7
+[2095] LOCAL_MON byte=d5
+push payload byte d8
+[2105] LOCAL_MON byte=d6
+push payload byte d9
+[2115] LOCAL_MON byte=d7
+push payload byte da
+[2125] LOCAL_MON byte=d8
+push payload byte db
+[2135] LOCAL_MON byte=d9
+push payload byte dc
+[2145] LOCAL_MON byte=da
+push payload byte dd
+[2155] LOCAL_MON byte=db
+push payload byte de
+[2165] LOCAL_MON byte=dc
+push payload byte df
+[2175] LOCAL_MON byte=dd
+push payload byte e0
+[2185] LOCAL_MON byte=de
+push payload byte e1
+[2195] LOCAL_MON byte=df
+push payload byte e2
+[2205] LOCAL_MON byte=e0
+push payload byte e3
+[2215] LOCAL_MON byte=e1
+push payload byte e4
+[2225] LOCAL_MON byte=e2
+push payload byte e5
+[2235] LOCAL_MON byte=e3
+push payload byte e6
+[2245] LOCAL_MON byte=e4
+push payload byte e7
+[2255] LOCAL_MON byte=e5
+push payload byte e8
+[2265] LOCAL_MON byte=e6
+push payload byte e9
+[2275] LOCAL_MON byte=e7
+push payload byte ea
+[2285] LOCAL_MON byte=e8
+push payload byte eb
+[2295] LOCAL_MON byte=e9
+push payload byte ec
+[2305] LOCAL_MON byte=ea
+push payload byte ed
+[2315] LOCAL_MON byte=eb
+push payload byte ee
+[2325] LOCAL_MON byte=ec
+push payload byte ef
+[2335] LOCAL_MON byte=ed
+push payload byte f0
+[2345] LOCAL_MON byte=ee
+push payload byte f1
+[2355] LOCAL_MON byte=ef
+push payload byte f2
+[2365] LOCAL_MON byte=f0
+push payload byte f3
+[2375] LOCAL_MON byte=f1
+push payload byte f4
+[2385] LOCAL_MON byte=f2
+push payload byte f5
+[2395] LOCAL_MON byte=f3
+push payload byte f6
+[2405] LOCAL_MON byte=f4
+push payload byte f7
+[2415] LOCAL_MON byte=f5
+push payload byte f8
+[2425] LOCAL_MON byte=f6
+push payload byte f9
+[2435] LOCAL_MON byte=f7
+push payload byte fa
+[2445] LOCAL_MON byte=f8
+push payload byte fb
+[2455] LOCAL_MON byte=f9
+push payload byte fc
+[2465] LOCAL_MON byte=fa
+push payload byte fd
+[2475] LOCAL_MON byte=fb
+push payload byte fe
+[2485] LOCAL_MON byte=fc
+push payload byte ff
+[2495] LOCAL_MON byte=fd
+push payload byte 0
+[2505] LOCAL_MON byte=fe
+push payload byte 1
+[2515] LOCAL_MON byte=ff
+push payload byte 2
+[2525] LOCAL_MON byte=00
+push payload byte 3
+[2535] LOCAL_MON byte=01
+push payload byte 4
+[2545] LOCAL_MON byte=02
+push payload byte 5
+[2555] LOCAL_MON byte=03
+push payload byte 6
+[2565] LOCAL_MON byte=04
+push payload byte 7
+[2575] LOCAL_MON byte=05
+push payload byte 8
+[2585] LOCAL_MON byte=06
+push payload byte 9
+[2595] LOCAL_MON byte=07
+push payload byte a
+[2605] LOCAL_MON byte=08
+push payload byte b
+[2615] LOCAL_MON byte=09
+push payload byte c
+[2625] LOCAL_MON byte=0a
+push payload byte d
+[2635] LOCAL_MON byte=0b
+push payload byte e
+[2645] LOCAL_MON byte=0c
+push payload byte d9
+[2655] LOCAL_MON byte=0d
+                2665 .........................crc_left 2  entered state moved to crc f7
+push crc byte f7
+[2665] LOCAL_MON byte=0e
+[2675] LOCAL_MON byte=d9
+[2685] LOCAL_MON byte=f7
+==== LOCAL CHECKER REPORT: checks=3 passes=3 fails=0 -> PASS ====
+==== REMOTE CHECKER REPORT: packets=0 words=0 pass=0 fail=0 -> PASS ====
+==== DROP CHECKER REPORT: invalid_fragments=0 expected=0x0000 actual=0x0000 -> PASS ====
+==== COVERAGE REPORT: cg_input = 32.74% ====
+PASSED TP06: local payload boundary test completed
+$finish called from file "./verif/tb/bird_test.sv", line 123.
+$finish at simulation time                30065
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 30065
+CPU Time:      0.390 seconds;       Data structure size:   0.1Mb
+Sun Jun 21 22:30:11 2026
