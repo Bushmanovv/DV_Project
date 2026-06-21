@@ -1,9 +1,9 @@
 class bird_driver;
 
-  virtual bird_if vif;
+  virtual bird_if.DRIVER vif;
   mailbox #(bird_transaction) gen2drv_mbx;
 
-  function new(virtual bird_if vif, mailbox #(bird_transaction) gen2drv_mbx);
+  function new(virtual bird_if.DRIVER vif, mailbox #(bird_transaction) gen2drv_mbx);
     this.vif = vif;
     this.gen2drv_mbx = gen2drv_mbx;
   endfunction
