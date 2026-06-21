@@ -1,0 +1,60 @@
+Command: /home/st57/DV_Project/./simv +TEST=remote_protocol_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name remote_protocol_test -l logs/sim_remote_protocol_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+[0] TEST starting: remote_protocol_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+[65] SEQ bird_remote_protocol_sequence: sent 2 remote protocol-error fragments (expect drop_cnt += 2)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+                 115 .........................crc_left 2  entered state moved to crc 8f
+                 135 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[135] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=4 frag_num=3 seq_num=0 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x00030401 crc16=0x8fa0 payload=a1 a2 a3 1a 
+[135] DROP_CHK predicted drop -> exp_drops=0x0001 (cfg traffic_type=1 payload_len=4 frag_num=3 seq_num=0 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x00030401)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+                 185 .........................crc_left 2  entered state moved to crc 8f
+                 205 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[205] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=4 frag_num=0 seq_num=3 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x03000401 crc16=0x8fa0 payload=a1 a2 a3 1a 
+[205] DROP_CHK predicted drop -> exp_drops=0x0002 (cfg traffic_type=1 payload_len=4 frag_num=0 seq_num=3 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x03000401)
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte a1
+ssssssssssssssssss state moved to payload
+push payload byte a2
+push payload byte a3
+[235] LOCAL_MON byte=a1
+push payload byte 1a
+[245] LOCAL_MON byte=a2
+                 255 .........................crc_left 2  entered state moved to crc 8f
+push crc byte 8f
+[255] LOCAL_MON byte=a3
+[265] LOCAL_MON byte=1a
+[275] LOCAL_MON byte=8f
+==== LOCAL CHECKER REPORT: checks=0 passes=0 fails=0 -> PASS ====
+==== REMOTE CHECKER REPORT: packets=0 words=0 pass=0 fail=0 -> PASS ====
+==== DROP CHECKER REPORT: invalid_fragments=2 expected=0x0002 actual=0x0002 -> PASS ====
+==== COVERAGE REPORT: cg_input = 42.26% ====
+$finish called from file "./verif/tests/negative_tests.sv", line 34.
+$finish at simulation time                 2065
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 2065
+CPU Time:      0.360 seconds;       Data structure size:   0.1Mb
+Sun Jun 21 22:30:13 2026

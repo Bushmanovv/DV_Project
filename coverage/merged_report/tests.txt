@@ -1,0 +1,27 @@
+Tests
+
+Total Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH GROUP  
+ 81.90  87.80  65.85  81.31  80.00  80.00  96.43 
+
+
+Total tests in report: 16
+-------------------------------------------------------------------------------
+Data from the following tests was used to generate this report
+simv.cm/random_regression_test                 
+simv.cm/remote_basic_test                      
+simv.cm/drop_wrap_test                         
+simv.cm/remote_crc_test                        
+simv.cm/local_payload_boundary_test            
+simv.cm/remote_protocol_test                   
+simv.cm/remote_reorder_test                    
+simv.cm/remote_inorder_test                    
+simv.cm/reset_clears_all_outputs_test          
+simv.cm/backpressure_stability_test            
+simv.cm/valid_ready_basic_transfer_test        
+simv.cm/drop_count_test                        
+simv.cm/invalid_cfg_test                       
+simv.cm/cfg_sampled_on_first_payload_byte_test 
+simv.cm/mixed_traffic_test                     
+simv.cm/local_basic_test                       
+

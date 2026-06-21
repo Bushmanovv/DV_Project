@@ -1,0 +1,8 @@
+Command: urg -dir simv.cm -format both -report coverage/merged_report -log logs/urg.log
+Date: Sun Jun 21 22:30:15 2026
+
+URG Version T-2022.06-SP2 Copyright (c) 1991-2022 by Synopsys Inc.
+
+Note-[URG-RDG] Report directory generated
+  Report written to directory coverage/merged_report
+

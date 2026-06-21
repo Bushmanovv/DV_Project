@@ -1,0 +1,24 @@
+Command: /home/st57/DV_Project/./simv +TEST=reset_clears_all_outputs_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name reset_clears_all_outputs_test -l logs/sim_reset_clears_all_outputs_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+Starting TP01 reset_clears_all_outputs_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+PASSED TP01: reset clears outputs and drop counter
+$finish called from file "./verif/tb/bird_test.sv", line 123.
+$finish at simulation time                  125
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 125
+CPU Time:      0.370 seconds;       Data structure size:   0.0Mb
+Sun Jun 21 22:30:09 2026

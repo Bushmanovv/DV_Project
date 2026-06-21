@@ -1,0 +1,1564 @@
+Command: /home/st57/DV_Project/./simv +TEST=random_regression_test -cm line+cond+fsm+tgl+branch+assert -cm_dir simv.cm -cm_name random_regression_test -l logs/sim_random_regression_test.log
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 21 22:30 2026
+[0] TEST starting: random_regression_test
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+ssssssssssssssssss state moved to idle
+[65] SEQ bird_random_regression_sequence: sent 24 constrained-random fragments
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+push payload byte 13
+[95] LOCAL_MON byte=11
+push payload byte 14
+[105] LOCAL_MON byte=12
+push payload byte 15
+[115] LOCAL_MON byte=13
+push payload byte 16
+[125] LOCAL_MON byte=14
+push payload byte 17
+[135] LOCAL_MON byte=15
+push payload byte 4a
+[145] LOCAL_MON byte=16
+                 155 .........................crc_left 2  entered state moved to crc 1a
+push crc byte 1a
+[155] LOCAL_MON byte=17
+[165] LOCAL_MON byte=4a
+                 175 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[175] LOCAL_MON byte=1a
+[175] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=8 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010800 crc16=0x1aa0 payload=11 12 13 14 15 16 17 4a 
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+[195] LOCAL_MON byte=a0
+[195] LOCAL_CHK checked local packet (10 bytes)
+                 505 .........................crc_left 2  entered state moved to crc f2
+                 525 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[525] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=32 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01012002 crc16=0xf2a0 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf 3b 
+[525] DROP_CHK predicted drop -> exp_drops=0x0001 (cfg traffic_type=0 payload_len=32 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01012002)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to crc
+                 545 .........................crc_left 2  entered state moved to crc 1a
+                 565 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[565] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=1 frag_num=3 seq_num=0 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x00030101 crc16=0x1aa0 payload=54 
+[565] DROP_CHK predicted drop -> exp_drops=0x0002 (cfg traffic_type=1 payload_len=1 frag_num=3 seq_num=0 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x00030101)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+Dropppppppppppppppppppppppppppp
+                 685 .........................crc_left 2  entered state moved to crc 37
+                 705 .........................crc_left 1  entered state moved to crc 10
+ssssssssssssssssss state moved to idle
+[705] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=11 frag_num=0 seq_num=3 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x03000b01 crc16=0x3710 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa 88 
+[705] DROP_CHK predicted drop -> exp_drops=0x0003 (cfg traffic_type=1 payload_len=11 frag_num=0 seq_num=3 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x03000b01)
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+push payload byte 13
+[735] LOCAL_MON byte=11
+push payload byte 14
+[745] LOCAL_MON byte=12
+push payload byte 15
+[755] LOCAL_MON byte=13
+push payload byte 16
+[765] LOCAL_MON byte=14
+push payload byte 17
+[775] LOCAL_MON byte=15
+push payload byte 18
+[785] LOCAL_MON byte=16
+push payload byte 19
+[795] LOCAL_MON byte=17
+push payload byte 1a
+[805] LOCAL_MON byte=18
+push payload byte 1b
+[815] LOCAL_MON byte=19
+push payload byte 1c
+[825] LOCAL_MON byte=1a
+push payload byte 1d
+[835] LOCAL_MON byte=1b
+push payload byte 1e
+[845] LOCAL_MON byte=1c
+push payload byte 1f
+[855] LOCAL_MON byte=1d
+push payload byte 20
+[865] LOCAL_MON byte=1e
+push payload byte 21
+[875] LOCAL_MON byte=1f
+push payload byte 22
+[885] LOCAL_MON byte=20
+push payload byte 23
+[895] LOCAL_MON byte=21
+push payload byte 24
+[905] LOCAL_MON byte=22
+push payload byte 25
+[915] LOCAL_MON byte=23
+push payload byte 26
+[925] LOCAL_MON byte=24
+push payload byte 27
+[935] LOCAL_MON byte=25
+push payload byte 28
+[945] LOCAL_MON byte=26
+push payload byte 29
+[955] LOCAL_MON byte=27
+push payload byte 2a
+[965] LOCAL_MON byte=28
+push payload byte 2b
+[975] LOCAL_MON byte=29
+push payload byte 98
+[985] LOCAL_MON byte=2a
+                 995 .........................crc_left 2  entered state moved to crc f2
+push crc byte f2
+[995] LOCAL_MON byte=2b
+[1005] LOCAL_MON byte=98
+                1015 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[1015] LOCAL_MON byte=f2
+[1015] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=28 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01011c00 crc16=0xf210 payload=11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 98 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte f3
+ssssssssssssssssss state moved to crc
+                1035 .........................crc_left 2  entered state moved to crc c1
+push crc byte c1
+[1035] LOCAL_MON byte=10
+[1035] LOCAL_CHK checked local packet (30 bytes)
+[1045] LOCAL_MON byte=f3
+                1055 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[1055] LOCAL_MON byte=c1
+[1055] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xc1a0 payload=f3 
+==================== Delete cur_frag_payload =========== idle state now
+====================0 Adding data a1
+ssssssssssssssssss state moved to payload
+                1075 ====================3 Adding data a2
+[1075] LOCAL_MON byte=a0
+[1075] LOCAL_CHK checked local packet (3 bytes)
+                1085 ====================3 Adding data a3
+                1095 ====================3 Adding data a4
+                1105 ====================3 Adding data a5
+                1115 ====================3 Adding data a6
+                1125 ====================3 Adding data a7
+                1135 ====================3 Adding data 60
+                1145 .........................crc_left 2  entered state moved to crc 59
+                1165 .........................crc_left 1  entered state moved to crc 10
+no drop and is remote
+payload ready ........
+push back to frag_payload a1
+push back to frag_payload a2
+push back to frag_payload a3
+push back to frag_payload a4
+push back to frag_payload a5
+push back to frag_payload a6
+push back to frag_payload a7
+push back to frag_payload 60
+check if frag done
+ssssssssssssssssss state moved to idle
+[1165] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=8 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010801 crc16=0x5910 payload=a1 a2 a3 a4 a5 a6 a7 60 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte f3
+ssssssssssssssssss state moved to crc
+                1185 .........................crc_left 2  entered state moved to crc c1
+push crc byte c1
+[1185] REMOTE_MON word=a4a3a2a1
+[1195] LOCAL_MON byte=f3
+[1195] REMOTE_MON word=60a7a6a5
+                1205 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[1205] LOCAL_MON byte=c1
+[1205] REMOTE_MON word=00006802
+[1205] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=1 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010100 crc16=0xc110 payload=f3 
+[1205] REMOTE_CHK checked remote packet: 3 words (incl CRC word), crc=6802
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[1225] LOCAL_MON byte=10
+[1225] LOCAL_CHK checked local packet (3 bytes)
+push payload byte 13
+[1235] LOCAL_MON byte=11
+push payload byte 14
+[1245] LOCAL_MON byte=12
+push payload byte 15
+[1255] LOCAL_MON byte=13
+push payload byte 16
+[1265] LOCAL_MON byte=14
+push payload byte 17
+[1275] LOCAL_MON byte=15
+push payload byte 18
+[1285] LOCAL_MON byte=16
+push payload byte 19
+[1295] LOCAL_MON byte=17
+push payload byte 1a
+[1305] LOCAL_MON byte=18
+push payload byte 1b
+[1315] LOCAL_MON byte=19
+push payload byte 1c
+[1325] LOCAL_MON byte=1a
+push payload byte 1d
+[1335] LOCAL_MON byte=1b
+push payload byte 1e
+[1345] LOCAL_MON byte=1c
+push payload byte 1f
+[1355] LOCAL_MON byte=1d
+push payload byte 20
+[1365] LOCAL_MON byte=1e
+push payload byte 21
+[1375] LOCAL_MON byte=1f
+push payload byte 22
+[1385] LOCAL_MON byte=20
+push payload byte 23
+[1395] LOCAL_MON byte=21
+push payload byte 24
+[1405] LOCAL_MON byte=22
+push payload byte 25
+[1415] LOCAL_MON byte=23
+push payload byte 26
+[1425] LOCAL_MON byte=24
+push payload byte 27
+[1435] LOCAL_MON byte=25
+push payload byte 28
+[1445] LOCAL_MON byte=26
+push payload byte 29
+[1455] LOCAL_MON byte=27
+push payload byte 2a
+[1465] LOCAL_MON byte=28
+push payload byte 2b
+[1475] LOCAL_MON byte=29
+push payload byte 2c
+[1485] LOCAL_MON byte=2a
+push payload byte 2d
+[1495] LOCAL_MON byte=2b
+push payload byte 2e
+[1505] LOCAL_MON byte=2c
+push payload byte 2f
+[1515] LOCAL_MON byte=2d
+push payload byte 30
+[1525] LOCAL_MON byte=2e
+push payload byte 31
+[1535] LOCAL_MON byte=2f
+push payload byte 32
+[1545] LOCAL_MON byte=30
+push payload byte 33
+[1555] LOCAL_MON byte=31
+push payload byte 34
+[1565] LOCAL_MON byte=32
+push payload byte 35
+[1575] LOCAL_MON byte=33
+push payload byte 36
+[1585] LOCAL_MON byte=34
+push payload byte 37
+[1595] LOCAL_MON byte=35
+push payload byte 38
+[1605] LOCAL_MON byte=36
+push payload byte 39
+[1615] LOCAL_MON byte=37
+push payload byte 3a
+[1625] LOCAL_MON byte=38
+push payload byte 3b
+[1635] LOCAL_MON byte=39
+push payload byte 3c
+[1645] LOCAL_MON byte=3a
+push payload byte 3d
+[1655] LOCAL_MON byte=3b
+push payload byte 3e
+[1665] LOCAL_MON byte=3c
+push payload byte 3f
+[1675] LOCAL_MON byte=3d
+push payload byte 40
+[1685] LOCAL_MON byte=3e
+push payload byte 41
+[1695] LOCAL_MON byte=3f
+push payload byte 42
+[1705] LOCAL_MON byte=40
+push payload byte 43
+[1715] LOCAL_MON byte=41
+push payload byte 44
+[1725] LOCAL_MON byte=42
+push payload byte 45
+[1735] LOCAL_MON byte=43
+push payload byte 46
+[1745] LOCAL_MON byte=44
+push payload byte 47
+[1755] LOCAL_MON byte=45
+push payload byte 48
+[1765] LOCAL_MON byte=46
+push payload byte 49
+[1775] LOCAL_MON byte=47
+push payload byte 4a
+[1785] LOCAL_MON byte=48
+push payload byte 4b
+[1795] LOCAL_MON byte=49
+push payload byte 4c
+[1805] LOCAL_MON byte=4a
+push payload byte 4d
+[1815] LOCAL_MON byte=4b
+push payload byte 4e
+[1825] LOCAL_MON byte=4c
+push payload byte 4f
+[1835] LOCAL_MON byte=4d
+push payload byte 50
+[1845] LOCAL_MON byte=4e
+push payload byte 51
+[1855] LOCAL_MON byte=4f
+push payload byte 52
+[1865] LOCAL_MON byte=50
+push payload byte 53
+[1875] LOCAL_MON byte=51
+push payload byte 54
+[1885] LOCAL_MON byte=52
+push payload byte 55
+[1895] LOCAL_MON byte=53
+push payload byte 56
+[1905] LOCAL_MON byte=54
+push payload byte 57
+[1915] LOCAL_MON byte=55
+push payload byte 58
+[1925] LOCAL_MON byte=56
+push payload byte 59
+[1935] LOCAL_MON byte=57
+push payload byte 5a
+[1945] LOCAL_MON byte=58
+push payload byte 5b
+[1955] LOCAL_MON byte=59
+push payload byte 5c
+[1965] LOCAL_MON byte=5a
+push payload byte 5d
+[1975] LOCAL_MON byte=5b
+push payload byte 5e
+[1985] LOCAL_MON byte=5c
+push payload byte 5f
+[1995] LOCAL_MON byte=5d
+push payload byte 60
+[2005] LOCAL_MON byte=5e
+push payload byte 61
+[2015] LOCAL_MON byte=5f
+push payload byte 62
+[2025] LOCAL_MON byte=60
+push payload byte 63
+[2035] LOCAL_MON byte=61
+push payload byte 64
+[2045] LOCAL_MON byte=62
+push payload byte 65
+[2055] LOCAL_MON byte=63
+push payload byte 66
+[2065] LOCAL_MON byte=64
+push payload byte 67
+[2075] LOCAL_MON byte=65
+push payload byte 68
+[2085] LOCAL_MON byte=66
+push payload byte 69
+[2095] LOCAL_MON byte=67
+push payload byte 6a
+[2105] LOCAL_MON byte=68
+push payload byte 6b
+[2115] LOCAL_MON byte=69
+push payload byte 6c
+[2125] LOCAL_MON byte=6a
+push payload byte 6d
+[2135] LOCAL_MON byte=6b
+push payload byte 6e
+[2145] LOCAL_MON byte=6c
+push payload byte 6f
+[2155] LOCAL_MON byte=6d
+push payload byte 70
+[2165] LOCAL_MON byte=6e
+push payload byte 71
+[2175] LOCAL_MON byte=6f
+push payload byte 72
+[2185] LOCAL_MON byte=70
+push payload byte 73
+[2195] LOCAL_MON byte=71
+push payload byte 74
+[2205] LOCAL_MON byte=72
+push payload byte 75
+[2215] LOCAL_MON byte=73
+push payload byte 76
+[2225] LOCAL_MON byte=74
+push payload byte 77
+[2235] LOCAL_MON byte=75
+push payload byte 78
+[2245] LOCAL_MON byte=76
+push payload byte 79
+[2255] LOCAL_MON byte=77
+push payload byte 7a
+[2265] LOCAL_MON byte=78
+push payload byte 7b
+[2275] LOCAL_MON byte=79
+push payload byte 7c
+[2285] LOCAL_MON byte=7a
+push payload byte 7d
+[2295] LOCAL_MON byte=7b
+push payload byte 7e
+[2305] LOCAL_MON byte=7c
+push payload byte 7f
+[2315] LOCAL_MON byte=7d
+push payload byte 80
+[2325] LOCAL_MON byte=7e
+push payload byte 81
+[2335] LOCAL_MON byte=7f
+push payload byte 82
+[2345] LOCAL_MON byte=80
+push payload byte 83
+[2355] LOCAL_MON byte=81
+push payload byte 84
+[2365] LOCAL_MON byte=82
+push payload byte 85
+[2375] LOCAL_MON byte=83
+push payload byte 86
+[2385] LOCAL_MON byte=84
+push payload byte 87
+[2395] LOCAL_MON byte=85
+push payload byte 88
+[2405] LOCAL_MON byte=86
+push payload byte 89
+[2415] LOCAL_MON byte=87
+push payload byte 8a
+[2425] LOCAL_MON byte=88
+push payload byte 8b
+[2435] LOCAL_MON byte=89
+push payload byte 8c
+[2445] LOCAL_MON byte=8a
+push payload byte 8d
+[2455] LOCAL_MON byte=8b
+push payload byte 8e
+[2465] LOCAL_MON byte=8c
+push payload byte 8f
+[2475] LOCAL_MON byte=8d
+push payload byte 90
+[2485] LOCAL_MON byte=8e
+push payload byte 91
+[2495] LOCAL_MON byte=8f
+push payload byte 92
+[2505] LOCAL_MON byte=90
+push payload byte 93
+[2515] LOCAL_MON byte=91
+push payload byte 94
+[2525] LOCAL_MON byte=92
+push payload byte 95
+[2535] LOCAL_MON byte=93
+push payload byte 96
+[2545] LOCAL_MON byte=94
+push payload byte 97
+[2555] LOCAL_MON byte=95
+push payload byte 98
+[2565] LOCAL_MON byte=96
+push payload byte 99
+[2575] LOCAL_MON byte=97
+push payload byte 9a
+[2585] LOCAL_MON byte=98
+push payload byte 9b
+[2595] LOCAL_MON byte=99
+push payload byte 9c
+[2605] LOCAL_MON byte=9a
+push payload byte 9d
+[2615] LOCAL_MON byte=9b
+push payload byte 9e
+[2625] LOCAL_MON byte=9c
+push payload byte 9f
+[2635] LOCAL_MON byte=9d
+push payload byte a0
+[2645] LOCAL_MON byte=9e
+push payload byte a1
+[2655] LOCAL_MON byte=9f
+push payload byte a2
+[2665] LOCAL_MON byte=a0
+push payload byte a3
+[2675] LOCAL_MON byte=a1
+push payload byte a4
+[2685] LOCAL_MON byte=a2
+push payload byte a5
+[2695] LOCAL_MON byte=a3
+push payload byte a6
+[2705] LOCAL_MON byte=a4
+push payload byte a7
+[2715] LOCAL_MON byte=a5
+push payload byte a8
+[2725] LOCAL_MON byte=a6
+push payload byte a9
+[2735] LOCAL_MON byte=a7
+push payload byte aa
+[2745] LOCAL_MON byte=a8
+push payload byte ab
+[2755] LOCAL_MON byte=a9
+push payload byte ac
+[2765] LOCAL_MON byte=aa
+push payload byte ad
+[2775] LOCAL_MON byte=ab
+push payload byte ae
+[2785] LOCAL_MON byte=ac
+push payload byte af
+[2795] LOCAL_MON byte=ad
+push payload byte b0
+[2805] LOCAL_MON byte=ae
+push payload byte b1
+[2815] LOCAL_MON byte=af
+push payload byte b2
+[2825] LOCAL_MON byte=b0
+push payload byte b3
+[2835] LOCAL_MON byte=b1
+push payload byte b4
+[2845] LOCAL_MON byte=b2
+push payload byte b5
+[2855] LOCAL_MON byte=b3
+push payload byte b6
+[2865] LOCAL_MON byte=b4
+push payload byte b7
+[2875] LOCAL_MON byte=b5
+push payload byte b8
+[2885] LOCAL_MON byte=b6
+push payload byte b9
+[2895] LOCAL_MON byte=b7
+push payload byte ba
+[2905] LOCAL_MON byte=b8
+push payload byte bb
+[2915] LOCAL_MON byte=b9
+push payload byte bc
+[2925] LOCAL_MON byte=ba
+push payload byte bd
+[2935] LOCAL_MON byte=bb
+push payload byte be
+[2945] LOCAL_MON byte=bc
+push payload byte bf
+[2955] LOCAL_MON byte=bd
+push payload byte c0
+[2965] LOCAL_MON byte=be
+push payload byte c1
+[2975] LOCAL_MON byte=bf
+push payload byte c2
+[2985] LOCAL_MON byte=c0
+push payload byte c3
+[2995] LOCAL_MON byte=c1
+push payload byte c4
+[3005] LOCAL_MON byte=c2
+push payload byte c5
+[3015] LOCAL_MON byte=c3
+push payload byte c6
+[3025] LOCAL_MON byte=c4
+push payload byte c7
+[3035] LOCAL_MON byte=c5
+push payload byte c8
+[3045] LOCAL_MON byte=c6
+push payload byte c9
+[3055] LOCAL_MON byte=c7
+push payload byte ca
+[3065] LOCAL_MON byte=c8
+push payload byte cb
+[3075] LOCAL_MON byte=c9
+push payload byte cc
+[3085] LOCAL_MON byte=ca
+push payload byte cd
+[3095] LOCAL_MON byte=cb
+push payload byte ce
+[3105] LOCAL_MON byte=cc
+push payload byte cf
+[3115] LOCAL_MON byte=cd
+push payload byte d0
+[3125] LOCAL_MON byte=ce
+push payload byte d1
+[3135] LOCAL_MON byte=cf
+push payload byte d2
+[3145] LOCAL_MON byte=d0
+push payload byte d3
+[3155] LOCAL_MON byte=d1
+push payload byte d4
+[3165] LOCAL_MON byte=d2
+push payload byte d5
+[3175] LOCAL_MON byte=d3
+push payload byte d6
+[3185] LOCAL_MON byte=d4
+push payload byte d7
+[3195] LOCAL_MON byte=d5
+push payload byte d8
+[3205] LOCAL_MON byte=d6
+push payload byte d9
+[3215] LOCAL_MON byte=d7
+push payload byte da
+[3225] LOCAL_MON byte=d8
+push payload byte db
+[3235] LOCAL_MON byte=d9
+push payload byte dc
+[3245] LOCAL_MON byte=da
+push payload byte dd
+[3255] LOCAL_MON byte=db
+push payload byte de
+[3265] LOCAL_MON byte=dc
+push payload byte df
+[3275] LOCAL_MON byte=dd
+push payload byte e0
+[3285] LOCAL_MON byte=de
+push payload byte e1
+[3295] LOCAL_MON byte=df
+push payload byte e2
+[3305] LOCAL_MON byte=e0
+push payload byte e3
+[3315] LOCAL_MON byte=e1
+push payload byte e4
+[3325] LOCAL_MON byte=e2
+push payload byte e5
+[3335] LOCAL_MON byte=e3
+push payload byte e6
+[3345] LOCAL_MON byte=e4
+push payload byte e7
+[3355] LOCAL_MON byte=e5
+push payload byte e8
+[3365] LOCAL_MON byte=e6
+push payload byte e9
+[3375] LOCAL_MON byte=e7
+push payload byte ea
+[3385] LOCAL_MON byte=e8
+push payload byte eb
+[3395] LOCAL_MON byte=e9
+push payload byte ec
+[3405] LOCAL_MON byte=ea
+push payload byte ed
+[3415] LOCAL_MON byte=eb
+push payload byte ee
+[3425] LOCAL_MON byte=ec
+push payload byte ef
+[3435] LOCAL_MON byte=ed
+push payload byte f0
+[3445] LOCAL_MON byte=ee
+push payload byte f1
+[3455] LOCAL_MON byte=ef
+push payload byte f2
+[3465] LOCAL_MON byte=f0
+push payload byte f3
+[3475] LOCAL_MON byte=f1
+push payload byte f4
+[3485] LOCAL_MON byte=f2
+push payload byte f5
+[3495] LOCAL_MON byte=f3
+push payload byte f6
+[3505] LOCAL_MON byte=f4
+push payload byte f7
+[3515] LOCAL_MON byte=f5
+push payload byte f8
+[3525] LOCAL_MON byte=f6
+push payload byte f9
+[3535] LOCAL_MON byte=f7
+push payload byte fa
+[3545] LOCAL_MON byte=f8
+push payload byte fb
+[3555] LOCAL_MON byte=f9
+push payload byte fc
+[3565] LOCAL_MON byte=fa
+push payload byte fd
+[3575] LOCAL_MON byte=fb
+push payload byte fe
+[3585] LOCAL_MON byte=fc
+push payload byte ff
+[3595] LOCAL_MON byte=fd
+push payload byte 0
+[3605] LOCAL_MON byte=fe
+push payload byte 1
+[3615] LOCAL_MON byte=ff
+push payload byte 2
+[3625] LOCAL_MON byte=00
+push payload byte 3
+[3635] LOCAL_MON byte=01
+push payload byte 4
+[3645] LOCAL_MON byte=02
+push payload byte 5
+[3655] LOCAL_MON byte=03
+push payload byte 6
+[3665] LOCAL_MON byte=04
+push payload byte 7
+[3675] LOCAL_MON byte=05
+push payload byte 8
+[3685] LOCAL_MON byte=06
+push payload byte 9
+[3695] LOCAL_MON byte=07
+push payload byte a
+[3705] LOCAL_MON byte=08
+push payload byte b
+[3715] LOCAL_MON byte=09
+push payload byte c
+[3725] LOCAL_MON byte=0a
+push payload byte d
+[3735] LOCAL_MON byte=0b
+push payload byte e
+[3745] LOCAL_MON byte=0c
+push payload byte d9
+[3755] LOCAL_MON byte=0d
+                3765 .........................crc_left 2  entered state moved to crc f7
+push crc byte f7
+[3765] LOCAL_MON byte=0e
+[3775] LOCAL_MON byte=d9
+                3785 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[3785] LOCAL_MON byte=f7
+[3785] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=255 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x0101ff00 crc16=0xf7a0 payload=11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e d9 
+==================== Delete cur_frag_payload =========== idle state now
+====================0 Adding data a1
+ssssssssssssssssss state moved to payload
+                3805 ====================3 Adding data a2
+[3805] LOCAL_MON byte=a0
+[3805] LOCAL_CHK checked local packet (257 bytes)
+                3815 ====================3 Adding data a3
+                3825 ====================3 Adding data a4
+                3835 ====================3 Adding data c9
+                3845 .........................crc_left 2  entered state moved to crc 15
+                3865 .........................crc_left 1  entered state moved to crc a0
+no drop and is remote
+payload ready ........
+push back to frag_payload a1
+push back to frag_payload a2
+push back to frag_payload a3
+push back to frag_payload a4
+push back to frag_payload c9
+check if frag done
+ssssssssssssssssss state moved to idle
+[3865] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=5 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010501 crc16=0x15a0 payload=a1 a2 a3 a4 c9 
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+[3885] REMOTE_MON word=a4a3a2a1
+[3895] REMOTE_MON word=000000c9
+[3905] REMOTE_MON word=0000eb34
+[3905] REMOTE_CHK checked remote packet: 3 words (incl CRC word), crc=eb34
+                4045 .........................crc_left 2  entered state moved to crc 6b
+                4065 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[4065] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=17 frag_num=1 seq_num=2 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x02011100 crc16=0x6ba0 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 ee 
+[4065] DROP_CHK predicted drop -> exp_drops=0x0004 (cfg traffic_type=0 payload_len=17 frag_num=1 seq_num=2 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x02011100)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+                4315 .........................crc_left 2  entered state moved to crc 7c
+                4335 .........................crc_left 1  entered state moved to crc 10
+ssssssssssssssssss state moved to idle
+[4335] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=24 frag_num=2 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01021800 crc16=0x7c10 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 01 
+[4335] DROP_CHK predicted drop -> exp_drops=0x0005 (cfg traffic_type=0 payload_len=24 frag_num=2 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01021800)
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+push payload byte 13
+[4365] LOCAL_MON byte=11
+push payload byte 14
+[4375] LOCAL_MON byte=12
+push payload byte 15
+[4385] LOCAL_MON byte=13
+push payload byte 16
+[4395] LOCAL_MON byte=14
+push payload byte 17
+[4405] LOCAL_MON byte=15
+push payload byte 18
+[4415] LOCAL_MON byte=16
+push payload byte 60
+[4425] LOCAL_MON byte=17
+                4435 .........................crc_left 2  entered state moved to crc b7
+push crc byte b7
+[4435] LOCAL_MON byte=18
+[4445] LOCAL_MON byte=60
+                4455 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[4455] LOCAL_MON byte=b7
+[4455] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=9 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010900 crc16=0xb7a0 payload=11 12 13 14 15 16 17 18 60 
+==================== Delete cur_frag_payload =========== idle state now
+====================0 Adding data a1
+ssssssssssssssssss state moved to payload
+                4475 ====================3 Adding data a2
+[4475] LOCAL_MON byte=a0
+[4475] LOCAL_CHK checked local packet (11 bytes)
+                4485 ====================3 Adding data a3
+                4495 ====================3 Adding data a4
+                4505 ====================3 Adding data a5
+                4515 ====================3 Adding data a6
+                4525 ====================3 Adding data a7
+                4535 ====================3 Adding data 60
+                4545 .........................crc_left 2  entered state moved to crc 59
+                4565 .........................crc_left 1  entered state moved to crc a0
+no drop and is remote
+payload ready ........
+push back to frag_payload a1
+push back to frag_payload a2
+push back to frag_payload a3
+push back to frag_payload a4
+push back to frag_payload a5
+push back to frag_payload a6
+push back to frag_payload a7
+push back to frag_payload 60
+check if frag done
+ssssssssssssssssss state moved to idle
+[4565] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=8 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010801 crc16=0x59a0 payload=a1 a2 a3 a4 a5 a6 a7 60 
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+[4585] REMOTE_MON word=a4a3a2a1
+[4595] REMOTE_MON word=60a7a6a5
+[4605] REMOTE_MON word=00006802
+[4605] REMOTE_CHK checked remote packet: 3 words (incl CRC word), crc=6802
+                4635 .........................crc_left 2  entered state moved to crc 2a
+                4655 .........................crc_left 1  entered state moved to crc 10
+ssssssssssssssssss state moved to idle
+[4655] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=6 frag_num=1 seq_num=2 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x02010600 crc16=0x2a10 payload=a1 a2 a3 a4 a5 b8 
+[4655] DROP_CHK predicted drop -> exp_drops=0x0006 (cfg traffic_type=0 payload_len=6 frag_num=1 seq_num=2 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x02010600)
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+push payload byte 13
+[4685] LOCAL_MON byte=11
+push payload byte ac
+[4695] LOCAL_MON byte=12
+                4705 .........................crc_left 2  entered state moved to crc 77
+push crc byte 77
+[4705] LOCAL_MON byte=13
+[4715] LOCAL_MON byte=ac
+                4725 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[4725] LOCAL_MON byte=77
+[4725] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=4 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010400 crc16=0x7710 payload=11 12 13 ac 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[4745] LOCAL_MON byte=10
+[4745] LOCAL_CHK checked local packet (6 bytes)
+push payload byte 13
+[4755] LOCAL_MON byte=11
+push payload byte 14
+[4765] LOCAL_MON byte=12
+push payload byte 15
+[4775] LOCAL_MON byte=13
+push payload byte 16
+[4785] LOCAL_MON byte=14
+push payload byte 17
+[4795] LOCAL_MON byte=15
+push payload byte 18
+[4805] LOCAL_MON byte=16
+push payload byte 19
+[4815] LOCAL_MON byte=17
+push payload byte 58
+[4825] LOCAL_MON byte=18
+                4835 .........................crc_left 2  entered state moved to crc be
+push crc byte be
+[4835] LOCAL_MON byte=19
+[4845] LOCAL_MON byte=58
+                4855 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[4855] LOCAL_MON byte=be
+[4855] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=10 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010a00 crc16=0xbe10 payload=11 12 13 14 15 16 17 18 19 58 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[4875] LOCAL_MON byte=10
+[4875] LOCAL_CHK checked local packet (12 bytes)
+push payload byte 13
+[4885] LOCAL_MON byte=11
+push payload byte 14
+[4895] LOCAL_MON byte=12
+push payload byte 15
+[4905] LOCAL_MON byte=13
+push payload byte db
+[4915] LOCAL_MON byte=14
+                4925 .........................crc_left 2  entered state moved to crc 40
+push crc byte 40
+[4925] LOCAL_MON byte=15
+[4935] LOCAL_MON byte=db
+                4945 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[4945] LOCAL_MON byte=40
+[4945] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=6 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010600 crc16=0x40a0 payload=11 12 13 14 15 db 
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+[4965] LOCAL_MON byte=a0
+[4965] LOCAL_CHK checked local packet (8 bytes)
+                5085 .........................crc_left 2  entered state moved to crc 67
+                5105 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[5105] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=13 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01010d02 crc16=0x67a0 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac 61 
+[5105] DROP_CHK predicted drop -> exp_drops=0x0007 (cfg traffic_type=0 payload_len=13 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01010d02)
+==================== Delete cur_frag_payload =========== idle state now
+rx_drop ..........................
+ssssssssssssssssss state moved to payload
+                5245 .........................crc_left 2  entered state moved to crc 67
+                5265 .........................crc_left 1  entered state moved to crc a0
+ssssssssssssssssss state moved to idle
+[5265] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=13 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01010d02 crc16=0x67a0 payload=a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac 61 
+[5265] DROP_CHK predicted drop -> exp_drops=0x0008 (cfg traffic_type=0 payload_len=13 frag_num=1 seq_num=1 rsv7_1=1 rsv23_21=0 rsv31_29=0 packed=0x01010d02)
+==================== Delete cur_frag_payload =========== idle state now
+====================0 Adding data a1
+ssssssssssssssssss state moved to payload
+                5285 ====================3 Adding data a2
+                5295 ====================3 Adding data a3
+                5305 ====================3 Adding data a4
+                5315 ====================3 Adding data a5
+                5325 ====================3 Adding data a6
+                5335 ====================3 Adding data d9
+                5345 .........................crc_left 2  entered state moved to crc ff
+                5365 .........................crc_left 1  entered state moved to crc 10
+no drop and is remote
+payload ready ........
+push back to frag_payload a1
+push back to frag_payload a2
+push back to frag_payload a3
+push back to frag_payload a4
+push back to frag_payload a5
+push back to frag_payload a6
+push back to frag_payload d9
+check if frag done
+ssssssssssssssssss state moved to idle
+[5365] INPUT_MON observed: observed_input cfg traffic_type=1 payload_len=7 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010701 crc16=0xff10 payload=a1 a2 a3 a4 a5 a6 d9 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[5385] REMOTE_MON word=a4a3a2a1
+push payload byte 13
+[5395] LOCAL_MON byte=11
+[5395] REMOTE_MON word=00d9a6a5
+push payload byte 14
+[5405] LOCAL_MON byte=12
+[5405] REMOTE_MON word=0000b919
+[5405] REMOTE_CHK checked remote packet: 3 words (incl CRC word), crc=b919
+push payload byte 15
+[5415] LOCAL_MON byte=13
+push payload byte 16
+[5425] LOCAL_MON byte=14
+push payload byte 17
+[5435] LOCAL_MON byte=15
+push payload byte 4a
+[5445] LOCAL_MON byte=16
+                5455 .........................crc_left 2  entered state moved to crc 1a
+push crc byte 1a
+[5455] LOCAL_MON byte=17
+[5465] LOCAL_MON byte=4a
+                5475 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[5475] LOCAL_MON byte=1a
+[5475] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=8 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01010800 crc16=0x1a10 payload=11 12 13 14 15 16 17 4a 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[5495] LOCAL_MON byte=10
+[5495] LOCAL_CHK checked local packet (10 bytes)
+push payload byte 13
+[5505] LOCAL_MON byte=11
+push payload byte 14
+[5515] LOCAL_MON byte=12
+push payload byte 15
+[5525] LOCAL_MON byte=13
+push payload byte 16
+[5535] LOCAL_MON byte=14
+push payload byte 17
+[5545] LOCAL_MON byte=15
+push payload byte 18
+[5555] LOCAL_MON byte=16
+push payload byte 19
+[5565] LOCAL_MON byte=17
+push payload byte 1a
+[5575] LOCAL_MON byte=18
+push payload byte 1b
+[5585] LOCAL_MON byte=19
+push payload byte 1c
+[5595] LOCAL_MON byte=1a
+push payload byte 1d
+[5605] LOCAL_MON byte=1b
+push payload byte 1e
+[5615] LOCAL_MON byte=1c
+push payload byte 1f
+[5625] LOCAL_MON byte=1d
+push payload byte 20
+[5635] LOCAL_MON byte=1e
+push payload byte 21
+[5645] LOCAL_MON byte=1f
+push payload byte 22
+[5655] LOCAL_MON byte=20
+push payload byte 23
+[5665] LOCAL_MON byte=21
+push payload byte 24
+[5675] LOCAL_MON byte=22
+push payload byte 3a
+[5685] LOCAL_MON byte=23
+                5695 .........................crc_left 2  entered state moved to crc de
+push crc byte de
+[5695] LOCAL_MON byte=24
+[5705] LOCAL_MON byte=3a
+                5715 .........................crc_left 1  entered state moved to crc 10
+push crc byte 10
+ssssssssssssssssss state moved to idle
+[5715] LOCAL_MON byte=de
+[5715] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=21 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x01011500 crc16=0xde10 payload=11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 3a 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte 11
+ssssssssssssssssss state moved to payload
+push payload byte 12
+[5735] LOCAL_MON byte=10
+[5735] LOCAL_CHK checked local packet (23 bytes)
+push payload byte 13
+[5745] LOCAL_MON byte=11
+push payload byte 14
+[5755] LOCAL_MON byte=12
+push payload byte 15
+[5765] LOCAL_MON byte=13
+push payload byte 16
+[5775] LOCAL_MON byte=14
+push payload byte 17
+[5785] LOCAL_MON byte=15
+push payload byte 18
+[5795] LOCAL_MON byte=16
+push payload byte 19
+[5805] LOCAL_MON byte=17
+push payload byte 1a
+[5815] LOCAL_MON byte=18
+push payload byte 1b
+[5825] LOCAL_MON byte=19
+push payload byte 1c
+[5835] LOCAL_MON byte=1a
+push payload byte 1d
+[5845] LOCAL_MON byte=1b
+push payload byte 1e
+[5855] LOCAL_MON byte=1c
+push payload byte 1f
+[5865] LOCAL_MON byte=1d
+push payload byte 20
+[5875] LOCAL_MON byte=1e
+push payload byte 21
+[5885] LOCAL_MON byte=1f
+push payload byte 22
+[5895] LOCAL_MON byte=20
+push payload byte 23
+[5905] LOCAL_MON byte=21
+push payload byte 24
+[5915] LOCAL_MON byte=22
+push payload byte 25
+[5925] LOCAL_MON byte=23
+push payload byte 26
+[5935] LOCAL_MON byte=24
+push payload byte 27
+[5945] LOCAL_MON byte=25
+push payload byte 28
+[5955] LOCAL_MON byte=26
+push payload byte 29
+[5965] LOCAL_MON byte=27
+push payload byte 2a
+[5975] LOCAL_MON byte=28
+push payload byte 2b
+[5985] LOCAL_MON byte=29
+push payload byte 2c
+[5995] LOCAL_MON byte=2a
+push payload byte 2d
+[6005] LOCAL_MON byte=2b
+push payload byte 2e
+[6015] LOCAL_MON byte=2c
+push payload byte 2f
+[6025] LOCAL_MON byte=2d
+push payload byte 30
+[6035] LOCAL_MON byte=2e
+push payload byte 31
+[6045] LOCAL_MON byte=2f
+push payload byte 32
+[6055] LOCAL_MON byte=30
+push payload byte 33
+[6065] LOCAL_MON byte=31
+push payload byte 34
+[6075] LOCAL_MON byte=32
+push payload byte 35
+[6085] LOCAL_MON byte=33
+push payload byte 36
+[6095] LOCAL_MON byte=34
+push payload byte 37
+[6105] LOCAL_MON byte=35
+push payload byte 38
+[6115] LOCAL_MON byte=36
+push payload byte 39
+[6125] LOCAL_MON byte=37
+push payload byte 3a
+[6135] LOCAL_MON byte=38
+push payload byte 3b
+[6145] LOCAL_MON byte=39
+push payload byte 3c
+[6155] LOCAL_MON byte=3a
+push payload byte 3d
+[6165] LOCAL_MON byte=3b
+push payload byte 3e
+[6175] LOCAL_MON byte=3c
+push payload byte 3f
+[6185] LOCAL_MON byte=3d
+push payload byte 40
+[6195] LOCAL_MON byte=3e
+push payload byte 41
+[6205] LOCAL_MON byte=3f
+push payload byte 42
+[6215] LOCAL_MON byte=40
+push payload byte 43
+[6225] LOCAL_MON byte=41
+push payload byte 44
+[6235] LOCAL_MON byte=42
+push payload byte 45
+[6245] LOCAL_MON byte=43
+push payload byte 46
+[6255] LOCAL_MON byte=44
+push payload byte 47
+[6265] LOCAL_MON byte=45
+push payload byte 48
+[6275] LOCAL_MON byte=46
+push payload byte 49
+[6285] LOCAL_MON byte=47
+push payload byte 4a
+[6295] LOCAL_MON byte=48
+push payload byte 4b
+[6305] LOCAL_MON byte=49
+push payload byte 4c
+[6315] LOCAL_MON byte=4a
+push payload byte 4d
+[6325] LOCAL_MON byte=4b
+push payload byte 4e
+[6335] LOCAL_MON byte=4c
+push payload byte 4f
+[6345] LOCAL_MON byte=4d
+push payload byte 50
+[6355] LOCAL_MON byte=4e
+push payload byte 51
+[6365] LOCAL_MON byte=4f
+push payload byte 52
+[6375] LOCAL_MON byte=50
+push payload byte 53
+[6385] LOCAL_MON byte=51
+push payload byte 54
+[6395] LOCAL_MON byte=52
+push payload byte 55
+[6405] LOCAL_MON byte=53
+push payload byte 56
+[6415] LOCAL_MON byte=54
+push payload byte 57
+[6425] LOCAL_MON byte=55
+push payload byte 58
+[6435] LOCAL_MON byte=56
+push payload byte 59
+[6445] LOCAL_MON byte=57
+push payload byte 5a
+[6455] LOCAL_MON byte=58
+push payload byte 5b
+[6465] LOCAL_MON byte=59
+push payload byte 5c
+[6475] LOCAL_MON byte=5a
+push payload byte 5d
+[6485] LOCAL_MON byte=5b
+push payload byte 5e
+[6495] LOCAL_MON byte=5c
+push payload byte 5f
+[6505] LOCAL_MON byte=5d
+push payload byte 60
+[6515] LOCAL_MON byte=5e
+push payload byte 61
+[6525] LOCAL_MON byte=5f
+push payload byte 62
+[6535] LOCAL_MON byte=60
+push payload byte 63
+[6545] LOCAL_MON byte=61
+push payload byte 64
+[6555] LOCAL_MON byte=62
+push payload byte 65
+[6565] LOCAL_MON byte=63
+push payload byte 66
+[6575] LOCAL_MON byte=64
+push payload byte 67
+[6585] LOCAL_MON byte=65
+push payload byte 68
+[6595] LOCAL_MON byte=66
+push payload byte 69
+[6605] LOCAL_MON byte=67
+push payload byte 6a
+[6615] LOCAL_MON byte=68
+push payload byte 6b
+[6625] LOCAL_MON byte=69
+push payload byte 6c
+[6635] LOCAL_MON byte=6a
+push payload byte 6d
+[6645] LOCAL_MON byte=6b
+push payload byte 6e
+[6655] LOCAL_MON byte=6c
+push payload byte 6f
+[6665] LOCAL_MON byte=6d
+push payload byte 70
+[6675] LOCAL_MON byte=6e
+push payload byte 71
+[6685] LOCAL_MON byte=6f
+push payload byte 72
+[6695] LOCAL_MON byte=70
+push payload byte 73
+[6705] LOCAL_MON byte=71
+push payload byte 74
+[6715] LOCAL_MON byte=72
+push payload byte 75
+[6725] LOCAL_MON byte=73
+push payload byte 76
+[6735] LOCAL_MON byte=74
+push payload byte 77
+[6745] LOCAL_MON byte=75
+push payload byte 78
+[6755] LOCAL_MON byte=76
+push payload byte 79
+[6765] LOCAL_MON byte=77
+push payload byte 7a
+[6775] LOCAL_MON byte=78
+push payload byte 7b
+[6785] LOCAL_MON byte=79
+push payload byte 7c
+[6795] LOCAL_MON byte=7a
+push payload byte 7d
+[6805] LOCAL_MON byte=7b
+push payload byte 7e
+[6815] LOCAL_MON byte=7c
+push payload byte 7f
+[6825] LOCAL_MON byte=7d
+push payload byte 80
+[6835] LOCAL_MON byte=7e
+push payload byte 81
+[6845] LOCAL_MON byte=7f
+push payload byte 82
+[6855] LOCAL_MON byte=80
+push payload byte 83
+[6865] LOCAL_MON byte=81
+push payload byte 84
+[6875] LOCAL_MON byte=82
+push payload byte 85
+[6885] LOCAL_MON byte=83
+push payload byte 86
+[6895] LOCAL_MON byte=84
+push payload byte 87
+[6905] LOCAL_MON byte=85
+push payload byte 88
+[6915] LOCAL_MON byte=86
+push payload byte 89
+[6925] LOCAL_MON byte=87
+push payload byte 8a
+[6935] LOCAL_MON byte=88
+push payload byte 8b
+[6945] LOCAL_MON byte=89
+push payload byte 8c
+[6955] LOCAL_MON byte=8a
+push payload byte 8d
+[6965] LOCAL_MON byte=8b
+push payload byte 8e
+[6975] LOCAL_MON byte=8c
+push payload byte 8f
+[6985] LOCAL_MON byte=8d
+push payload byte 90
+[6995] LOCAL_MON byte=8e
+push payload byte 91
+[7005] LOCAL_MON byte=8f
+push payload byte 92
+[7015] LOCAL_MON byte=90
+push payload byte 93
+[7025] LOCAL_MON byte=91
+push payload byte 94
+[7035] LOCAL_MON byte=92
+push payload byte 95
+[7045] LOCAL_MON byte=93
+push payload byte 96
+[7055] LOCAL_MON byte=94
+push payload byte 97
+[7065] LOCAL_MON byte=95
+push payload byte 98
+[7075] LOCAL_MON byte=96
+push payload byte 99
+[7085] LOCAL_MON byte=97
+push payload byte 9a
+[7095] LOCAL_MON byte=98
+push payload byte 9b
+[7105] LOCAL_MON byte=99
+push payload byte 9c
+[7115] LOCAL_MON byte=9a
+push payload byte 9d
+[7125] LOCAL_MON byte=9b
+push payload byte 9e
+[7135] LOCAL_MON byte=9c
+push payload byte 9f
+[7145] LOCAL_MON byte=9d
+push payload byte a0
+[7155] LOCAL_MON byte=9e
+push payload byte a1
+[7165] LOCAL_MON byte=9f
+push payload byte a2
+[7175] LOCAL_MON byte=a0
+push payload byte a3
+[7185] LOCAL_MON byte=a1
+push payload byte a4
+[7195] LOCAL_MON byte=a2
+push payload byte a5
+[7205] LOCAL_MON byte=a3
+push payload byte a6
+[7215] LOCAL_MON byte=a4
+push payload byte a7
+[7225] LOCAL_MON byte=a5
+push payload byte a8
+[7235] LOCAL_MON byte=a6
+push payload byte a9
+[7245] LOCAL_MON byte=a7
+push payload byte aa
+[7255] LOCAL_MON byte=a8
+push payload byte ab
+[7265] LOCAL_MON byte=a9
+push payload byte ac
+[7275] LOCAL_MON byte=aa
+push payload byte ad
+[7285] LOCAL_MON byte=ab
+push payload byte ae
+[7295] LOCAL_MON byte=ac
+push payload byte af
+[7305] LOCAL_MON byte=ad
+push payload byte b0
+[7315] LOCAL_MON byte=ae
+push payload byte b1
+[7325] LOCAL_MON byte=af
+push payload byte b2
+[7335] LOCAL_MON byte=b0
+push payload byte b3
+[7345] LOCAL_MON byte=b1
+push payload byte b4
+[7355] LOCAL_MON byte=b2
+push payload byte b5
+[7365] LOCAL_MON byte=b3
+push payload byte b6
+[7375] LOCAL_MON byte=b4
+push payload byte b7
+[7385] LOCAL_MON byte=b5
+push payload byte b8
+[7395] LOCAL_MON byte=b6
+push payload byte b9
+[7405] LOCAL_MON byte=b7
+push payload byte ba
+[7415] LOCAL_MON byte=b8
+push payload byte bb
+[7425] LOCAL_MON byte=b9
+push payload byte bc
+[7435] LOCAL_MON byte=ba
+push payload byte bd
+[7445] LOCAL_MON byte=bb
+push payload byte be
+[7455] LOCAL_MON byte=bc
+push payload byte bf
+[7465] LOCAL_MON byte=bd
+push payload byte c0
+[7475] LOCAL_MON byte=be
+push payload byte c1
+[7485] LOCAL_MON byte=bf
+push payload byte c2
+[7495] LOCAL_MON byte=c0
+push payload byte c3
+[7505] LOCAL_MON byte=c1
+push payload byte c4
+[7515] LOCAL_MON byte=c2
+push payload byte c5
+[7525] LOCAL_MON byte=c3
+push payload byte c6
+[7535] LOCAL_MON byte=c4
+push payload byte c7
+[7545] LOCAL_MON byte=c5
+push payload byte c8
+[7555] LOCAL_MON byte=c6
+push payload byte c9
+[7565] LOCAL_MON byte=c7
+push payload byte ca
+[7575] LOCAL_MON byte=c8
+push payload byte cb
+[7585] LOCAL_MON byte=c9
+push payload byte cc
+[7595] LOCAL_MON byte=ca
+push payload byte cd
+[7605] LOCAL_MON byte=cb
+push payload byte ce
+[7615] LOCAL_MON byte=cc
+push payload byte cf
+[7625] LOCAL_MON byte=cd
+push payload byte d0
+[7635] LOCAL_MON byte=ce
+push payload byte d1
+[7645] LOCAL_MON byte=cf
+push payload byte d2
+[7655] LOCAL_MON byte=d0
+push payload byte d3
+[7665] LOCAL_MON byte=d1
+push payload byte d4
+[7675] LOCAL_MON byte=d2
+push payload byte d5
+[7685] LOCAL_MON byte=d3
+push payload byte d6
+[7695] LOCAL_MON byte=d4
+push payload byte d7
+[7705] LOCAL_MON byte=d5
+push payload byte d8
+[7715] LOCAL_MON byte=d6
+push payload byte d9
+[7725] LOCAL_MON byte=d7
+push payload byte da
+[7735] LOCAL_MON byte=d8
+push payload byte db
+[7745] LOCAL_MON byte=d9
+push payload byte dc
+[7755] LOCAL_MON byte=da
+push payload byte dd
+[7765] LOCAL_MON byte=db
+push payload byte de
+[7775] LOCAL_MON byte=dc
+push payload byte df
+[7785] LOCAL_MON byte=dd
+push payload byte e0
+[7795] LOCAL_MON byte=de
+push payload byte e1
+[7805] LOCAL_MON byte=df
+push payload byte e2
+[7815] LOCAL_MON byte=e0
+push payload byte e3
+[7825] LOCAL_MON byte=e1
+push payload byte e4
+[7835] LOCAL_MON byte=e2
+push payload byte e5
+[7845] LOCAL_MON byte=e3
+push payload byte e6
+[7855] LOCAL_MON byte=e4
+push payload byte e7
+[7865] LOCAL_MON byte=e5
+push payload byte e8
+[7875] LOCAL_MON byte=e6
+push payload byte e9
+[7885] LOCAL_MON byte=e7
+push payload byte ea
+[7895] LOCAL_MON byte=e8
+push payload byte eb
+[7905] LOCAL_MON byte=e9
+push payload byte ec
+[7915] LOCAL_MON byte=ea
+push payload byte ed
+[7925] LOCAL_MON byte=eb
+push payload byte ee
+[7935] LOCAL_MON byte=ec
+push payload byte ef
+[7945] LOCAL_MON byte=ed
+push payload byte f0
+[7955] LOCAL_MON byte=ee
+push payload byte f1
+[7965] LOCAL_MON byte=ef
+push payload byte f2
+[7975] LOCAL_MON byte=f0
+push payload byte f3
+[7985] LOCAL_MON byte=f1
+push payload byte f4
+[7995] LOCAL_MON byte=f2
+push payload byte f5
+[8005] LOCAL_MON byte=f3
+push payload byte f6
+[8015] LOCAL_MON byte=f4
+push payload byte f7
+[8025] LOCAL_MON byte=f5
+push payload byte f8
+[8035] LOCAL_MON byte=f6
+push payload byte f9
+[8045] LOCAL_MON byte=f7
+push payload byte fa
+[8055] LOCAL_MON byte=f8
+push payload byte fb
+[8065] LOCAL_MON byte=f9
+push payload byte fc
+[8075] LOCAL_MON byte=fa
+push payload byte fd
+[8085] LOCAL_MON byte=fb
+push payload byte fe
+[8095] LOCAL_MON byte=fc
+push payload byte ff
+[8105] LOCAL_MON byte=fd
+push payload byte 0
+[8115] LOCAL_MON byte=fe
+push payload byte 1
+[8125] LOCAL_MON byte=ff
+push payload byte 2
+[8135] LOCAL_MON byte=00
+push payload byte 3
+[8145] LOCAL_MON byte=01
+push payload byte 4
+[8155] LOCAL_MON byte=02
+push payload byte 5
+[8165] LOCAL_MON byte=03
+push payload byte 6
+[8175] LOCAL_MON byte=04
+push payload byte 7
+[8185] LOCAL_MON byte=05
+push payload byte 8
+[8195] LOCAL_MON byte=06
+push payload byte 9
+[8205] LOCAL_MON byte=07
+push payload byte a
+[8215] LOCAL_MON byte=08
+push payload byte b
+[8225] LOCAL_MON byte=09
+push payload byte c
+[8235] LOCAL_MON byte=0a
+push payload byte d
+[8245] LOCAL_MON byte=0b
+push payload byte e
+[8255] LOCAL_MON byte=0c
+push payload byte d9
+[8265] LOCAL_MON byte=0d
+                8275 .........................crc_left 2  entered state moved to crc f7
+push crc byte f7
+[8275] LOCAL_MON byte=0e
+[8285] LOCAL_MON byte=d9
+                8295 .........................crc_left 1  entered state moved to crc a0
+push crc byte a0
+ssssssssssssssssss state moved to idle
+[8295] LOCAL_MON byte=f7
+[8295] INPUT_MON observed: observed_input cfg traffic_type=0 payload_len=255 frag_num=1 seq_num=1 rsv7_1=0 rsv23_21=0 rsv31_29=0 packed=0x0101ff00 crc16=0xf7a0 payload=11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e d9 
+==================== Delete cur_frag_payload =========== idle state now
+push new local pkt first byte a1
+ssssssssssssssssss state moved to payload
+push payload byte a2
+[8315] LOCAL_MON byte=a0
+[8315] LOCAL_CHK checked local packet (257 bytes)
+push payload byte a3
+[8325] LOCAL_MON byte=a1
+push payload byte 1a
+[8335] LOCAL_MON byte=a2
+                8345 .........................crc_left 2  entered state moved to crc 8f
+push crc byte 8f
+[8345] LOCAL_MON byte=a3
+[8355] LOCAL_MON byte=1a
+[8365] LOCAL_MON byte=8f
+==== LOCAL CHECKER REPORT: checks=630 passes=630 fails=0 -> PASS ====
+==== REMOTE CHECKER REPORT: packets=4 words=12 pass=12 fail=0 -> PASS ====
+==== DROP CHECKER REPORT: invalid_fragments=8 expected=0x0008 actual=0x0008 -> PASS ====
+==== COVERAGE REPORT: cg_input = 91.07% ====
+$finish called from file "./verif/tests/regression_tests.sv", line 39.
+$finish at simulation time                60065
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, FSM, branch, tgl was monitored
+---------------------------------------------------------------------------
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 60065
+CPU Time:      0.430 seconds;       Data structure size:   0.1Mb
+Sun Jun 21 22:30:15 2026
