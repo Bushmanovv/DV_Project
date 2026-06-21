@@ -13,9 +13,9 @@ class local_basic_test extends bird_base_test;
 
     seq = new();
     seq.packet_count = 2;
-    seq.body(env);
+    seq.start(env.input_agent.gen);
 
-    repeat (100) @(posedge vif.clk);
+    repeat (600) @(vif.drv_cb);
 
     report();
 
